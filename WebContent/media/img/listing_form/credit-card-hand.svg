@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<g id="Filled_Icon" style="display:none;">
+	<g style="display:inline;">
+		<path d="M17,17H7c-0.23,0-0.473-0.32-0.496-0.911C5.934,16.613,5.259,17,4.5,17C4.224,17,4,16.775,4,16.5
+			C4,16.225,4.224,16,4.5,16c1.37,0,2.659-2.309,3.04-3.197C7.619,12.619,7.8,12.5,8,12.5h1.5c1.767,0,2.5-1.303,2.5-2V10
+			c0-0.697-0.733-2-2.5-2h-3H5v0.166c-1.981,0.425-5,1.906-5,6.999V18.5C0,21.531,2.467,24,5.5,24H13c1.103,0,2-0.896,2-2
+			c0-0.363-0.098-0.706-0.27-1H17c1.103,0,2-0.896,2-2C19,17.897,18.103,17,17,17z"/>
+		<path d="M13,7h11V5c0-1.103-0.897-2-2-2H7C5.896,3,5,3.897,5,5v2h4.5c2.283,0,3.5,1.742,3.5,3v0.5c0,1.257-1.217,3-3.5,3H8.321
+			c-0.263,0.546-0.853,1.643-1.686,2.463C6.754,15.984,6.875,16,7,16h15c1.103,0,2-0.896,2-2V8H13c-0.275,0-0.5-0.225-0.5-0.5
+			C12.5,7.224,12.725,7,13,7z M18.5,9h3C21.775,9,22,9.224,22,9.5c0,0.275-0.225,0.5-0.5,0.5h-3C18.225,10,18,9.775,18,9.5
+			C18,9.224,18.225,9,18.5,9z"/>
+	</g>
+</g>
+<g id="Outline_Icons">
+	<g>
+		<path style="fill:none;stroke:#33ace0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="M13,21.5H5.5
+			c-2.762,0-5-2.238-5-5v-3.334c0-5.666,4-6.666,6-6.666c0.961,0,2.363,0,3,0c0.972,0,2,0.5,2,1.5v0.5c0,1-1,1.5-2,1.5h-2
+			c0,0-1,3.5-3,3.5"/>
+		<path style="fill:none;stroke:#33ace0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="M10.5,15.5H17
+			c0.828,0,1.5,0.672,1.5,1.5c0,0.829-0.672,1.5-1.5,1.5h-4"/>
+		<path style="fill:none;stroke:#33ace0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="M10.5,18.5H13
+			c0.828,0,1.5,0.672,1.5,1.5c0,0.829-0.672,1.5-1.5,1.5h-1.5"/>
+		
+			<line style="fill:none;stroke:#33ace0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="23.5" y1="7.5" x2="11.396" y2="7.5"/>
+		<path style="fill:none;stroke:#33ace0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="M5.5,6.5V5
+			c0-0.828,0.672-1.5,1.5-1.5h15c0.828,0,1.5,0.672,1.5,1.5v9c0,0.829-0.672,1.5-1.5,1.5H7c-0.828,0-1.5-0.671-1.5-1.5v-0.812"/>
+		
+			<line style="fill:none;stroke:#33ace0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="21.5" y1="9.5" x2="18.5" y2="9.5"/>
+	</g>
+</g>
+</svg>

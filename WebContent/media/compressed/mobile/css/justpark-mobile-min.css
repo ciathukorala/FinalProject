@@ -1,0 +1,670 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 35px;
+}
+
+.paypal-info {
+    background: url('../../../img/payments/paypal-verified-109x110.png') no-repeat left top;
+    padding-left: 150px;
+    height: 120px;
+}
+
+.alert-heading {
+    font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.error-list a {
+    color:inherit;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+#nav-logo {
+    position:absolute;
+    top: 3px;
+    left: 5px;
+}
+
+#nav-title {
+    position:absolute;
+    top: 14px;
+    left:0;
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 0 70px 0 50px;
+}
+
+#nav-title h1 {
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #FFF;
+    font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    margin:0;
+    padding:0;
+    display: block;
+}
+
+#nav-search input {
+    width: 55%;
+    display: inline-block;
+}
+
+#header-logo {
+    margin: 0 0 40px;
+}
+
+#header-logo div {
+    background: url('../../../img/mobile/jp-black-green.png') no-repeat center center!important;
+    height: 53px;
+}
+
+
+h4.modal-title {
+    font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+/* Search */
+
+.search .listing-title {
+    font-size: 12px;
+    font-weight:700;
+
+}
+
+.search .listing-price {
+    font-size: 11px;
+    text-align: right;
+}
+
+.search .listing-price span {
+    font-size: 9px;
+}
+
+.search .carousel-inner .item {
+    height: 145px;
+    padding: 10px 15px;
+}
+
+.search .meta-deta {
+    font-size: 12px;
+}
+
+.search .booking-count {
+    font-size: 11px;
+}
+
+.search #map-holder {
+    width: 100%;
+    height: 180px;
+}
+
+.search #map-holder .map-canvas {
+    width: 100%;
+    height: 180px;
+}
+
+.listing-container {
+    height: 160px;
+}
+
+
+/* Home */
+
+#geo-location-area {
+    text-align: center;
+}
+
+#geo-location-area .or-divider {
+    margin: 30px 0;
+}
+
+/* Profile */
+.user-badge .profile-details {
+    width: 150px;
+    margin: 0 auto;
+}
+
+.user-badge .profile-details .profile-image {
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+.user-badge .profile-details .profile-image p {
+    background-color: #595959;
+    opacity: 0.7;
+    position:absolute;
+    left:0;
+    bottom:0;
+    height: 30px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.user-badge .profile-details .profile-image p .stars {
+    margin-top: 8px;
+}
+
+
+/* Carousel */
+
+.carousel-control {
+    background: none!important;
+    color: #999;
+}
+
+.carousel-control:hover {
+    background: none!important;
+    color: #999;
+}
+
+/* Footer */
+
+.footer p {
+    margin:0;
+}
+
+/* Messaging */
+
+.message-status {
+    float:right;
+    text-align: right;
+}
+
+.message-status .label {
+    margin-top:5px;
+    display: inline-block;
+}
+
+.messaging .message {
+    margin-bottom: 15px;
+    border: 1px solid #deddd2;
+    background-color: #fff;
+}
+
+.messaging .sender-details img {
+    float: left;
+    margin-right: 20px;
+}
+
+.messaging .message-markup {
+    padding: 10px 15px;
+    font-size: 12px;
+    display: block;
+}
+
+.messaging .display-name {
+    font-weight: bold;
+}
+
+.messaging .timestamp {
+    padding-right: 5px;
+}
+
+.messaging .header {
+    background: #f7f8f8;
+    padding: 6px 16px;
+    position: relative;
+    border-bottom: 1px solid #deddd2;
+    border-top: 0;
+    zoom: 1;
+    margin: 0;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.messaging .header p {
+    font-size: 11px;
+    padding: 0;
+    line-height: 1.7em;
+    margin: 0;
+}
+
+.messaging .infobox .header p.last-child {
+    margin-bottom: 0!important;
+}
+
+.messaging .infobox {
+    margin-bottom: 15px;
+}
+
+
+
+/* Bookings */
+.map-container {
+    position: relative;
+}
+
+.map-container .opaque-title {
+    background-color: #595959;
+    opacity: 0.8;
+    position:absolute;
+    left:0;
+    bottom:0;
+    height: 30px;
+    width:100%;
+    line-height: 30px;
+    color: #fff;
+    padding:0 15px;
+    font-size:14px;
+    font-weight: 300;
+    margin:0;
+    font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+/* Reviews */
+
+ul.feedback {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.feedback li span strong,ul.feedback li span time {
+    color: #555;
+}
+
+ul.feedback li span time {
+    font-size: 11px;
+    display: block;
+}
+
+ul.feedback li .span1 {
+    float: left;
+    width: 60px;
+}
+
+ul.feedback li .span2 {
+    float: left;
+    width: 140px;
+}
+
+ul.feedback li .span6 {
+    font-size: 12px;
+}
+
+ul.feedback li {
+    border-bottom: 1px solid #bbb;
+    color: #333;
+    text-shadow: 0 1px 0 #fff;
+    background: #fff;
+    position: relative;
+    padding: .4em 15px;
+    overflow: hidden;
+    display: block;
+    clear: both;
+    margin-bottom: 10px;
+}
+
+ul.feedback li:last {
+    border:none;
+}
+
+
+a.btn + div.panel,
+button.btn + div.panel {
+    margin-top: 20px;
+}
+
+
+.pac-container {
+    color: #666;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.pac-icon-marker {
+    display:none;
+}
+
+
+
+ul.listings li.unavailable {
+    background: url(../../../img/misc/fully_booked.png) no-repeat center 28px;
+}
+
+ul.listings li.unavailable>div {
+    opacity: .2;
+}
+
+#show-promo-code {
+    display: none;
+}
+
+#dashboard-account div.ui-block-a {
+    font-size: 12px;
+}
+
+#dashboard-account div.ui-block-b {
+    font-size: 12px;
+    color: #aaa;
+    text-align: right;
+}
+
+#local-amenities li {
+    font-size: 11px;
+}
+
+span.title {
+    float: left;
+    font-size: 14px;
+    max-width: 50%;
+    overflow: hidden;
+    word-wrap: normal;
+    display: inline-block;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+
+
+
+
+.btn-fb.active {
+    color: rgba(255,255,255,0.75);
+}
+
+.btn-fb {
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    background-color: #4262a5;
+    background-image: -moz-linear-gradient(top,#3b5998,#4c70ba);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#3b5998),to(#4c70ba));
+    background-image: -webkit-linear-gradient(top,#3b5998,#4c70ba);
+    background-image: -o-linear-gradient(top,#3b5998,#4c70ba);
+    background-image: linear-gradient(to bottom,#3b5998,#4c70ba);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3b5998',endColorstr='#ff4c70ba',GradientType=0);
+    border-color: #4c70ba #4c70ba #344e86;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    *background-color: #4c70ba;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.btn-fb:hover,.btn-fb:focus,.btn-fb:active,.btn-fb.active,.btn-fb.disabled,.btn-fb[disabled] {
+    color: #fff;
+    background-color: #4c70ba;
+    *background-color: #4264aa;
+}
+
+.btn-fb:active,.btn-fb.active {
+    background-color: #3b5998;
+}
+
+#google-map {
+    width: 100%;
+    height: 100%;
+}
+
+#google-map img {
+    max-width: none!important;
+}
+
+.wrap-text .ui-li-desc {
+    white-space: normal!important;
+}
+
+form .help-block,form.help-text {
+    margin-top: 3px!important;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+#footer p {
+    font-size: 12px;
+}
+
+.listing-container p.price {
+    display: block;
+    float: right;
+    font-size: 15px;
+    color: #e07a2b;
+    text-align: right;
+    width: 110px;
+    line-height: 1.2;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.listing-container p.price span {
+    font-size: 11px;
+}
+
+.listing-container p.facilities {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    font-size: 11px;
+    font-style: italic;
+    color: #aaa7a8;
+}
+
+.listing-container div.subhead {
+    clear: both;
+    line-height: 1.5;
+    padding: 0;
+    color: #afacac;
+    margin-top: 0!important;
+    position: relative;
+}
+
+.listing-container div.subhead span.pill {
+    padding: 2px 5px 1px 5px;
+    float: right;
+    display: inline;
+    position: relative;
+}
+
+.listing-container div.rating-area {
+    float: left;
+    font-size: 12px;
+}
+
+.listing-container li.bold span.title {
+    font-weight: bold;
+}
+
+.listing-container li.highlighted {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    background-color: #f2f7e7;
+    border: 1px solid #bedda3!important;
+    padding: 10px 0 10px;
+}
+
+span.rating-container {
+    float: left;
+    display: block;
+}
+
+span.stars {
+    position: relative;
+    width: 83px;
+    height: 14px;
+    margin-right: 3px;
+    display: inline-block;
+}
+
+span.stars_empty,span.stars_full {
+    position: absolute;
+    background-image: url('../../../img/global/stars.png');
+    background-repeat: no-repeat;
+    background-position: left top;
+    top: 0;
+    left: 0;
+    height: 14px;
+    display: block;
+}
+
+span.stars_empty {
+    background-position: left top;
+    width: 83px;
+    z-index: 11;
+}
+
+span.stars_full {
+    background-position: left -18px!important;
+    z-index: 12;
+    width: 83px;
+}
+
+.or-divider {
+    background: url('../../../img/misc/or-divider.png') no-repeat center center;
+    height: 7px;
+    margin: 15px 0;
+    position: relative;
+    display: block;
+    text-indent: -99999px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 35px;
+  line-height: 35px;
+  background-color: #f5f5f5;
+  margin:0;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+#login-facebook {
+    text-align: center;
+}
+
+ul.amenities li {
+    padding: 0 0 5px 25px;
+    margin-bottom: 5px;
+    line-height: 21px;
+    vertical-align: middle;
+    background-image: url('../../../img/icons/amenity-icons.png');
+    background-repeat: no-repeat;
+    background-position: 0 -380px;
+}
+
+li[category=transport][subcategory=airport] {
+    background-position: 0 0!important;
+}
+
+li[category=stadium][subcategory=cricket] {
+    background-position: 0 -226px!important;
+}
+
+li[category=restaurant] {
+    background-position: 0 -452px!important;
+}
+
+li[category=transport][subcategory=dlr] {
+    background-position: 0 -678px!important;
+}
+
+li[category=stadium][subcategory=football] {
+    background-position: 0 -904px!important;
+}
+
+li[category] {
+    background-position: 0 -1130px!important;
+}
+
+li[category=transport][subcategory=lul],li[category=transport][subcategory=underground] {
+    background-position: 0 -1356px!important;
+}
+
+li[category=transport][subcategory=national-rail] {
+    background-position: 0 -1582px!important;
+}
+
+li[category=transport][subcategory=nationalrail] {
+    background-position: 0 -1582px!important;
+}
+
+li[category=transport][subcategory=overground] {
+    background-position: 0 -1808px!important;
+}
+
+li[category=transport][subcategory=parking] {
+    background-position: 0 -2034px!important;
+}
+
+li[category=stadium][subcategory=rugbyleague],li[category=stadium][subcategory=rugbyunion] {
+    background-position: 0 -2260px!important;
+}
+
+li[category=transport][subcategory=station-green] {
+    background-position: 0 -2712px!important;
+}
+
+li[category=transport][subcategory=bart] {
+    background-position: 0 -2938px!important;
+}
+
+li[category=transport] {
+    background-position: 0 -2938px!important;
+}
+
+body.modal-open {
+    overflow: hidden;
+    position:fixed;
+    width: 100%;
+}
+
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    padding-top:10px;
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    border-width: 1px 0 0;
+}
+
+.loading-indicator {
+    height: 80px;
+    width: 80px;
+    background: url('../../../img/loading/loading.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.loading-indicator-overlay {
+    background-color: #fff;
+    opacity: .6;
+    filter: alpha(opacity = 60);
+}
+
+input.address-lines + input {
+    margin-top:5px;
+}
+
+#add-payment-method {
+    display: block;
+    padding: 10px 0 10px 0;
+    margin: 10px 0 10px 0;
+}
+
+#credit-payment-container {
+}

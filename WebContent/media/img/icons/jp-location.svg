@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<g id="Filled_Icons" style="display:none;">
+	<path style="display:inline;" d="M12,0.006c-4.411,0-8,3.588-8,8c0,4.244,7.272,15.307,7.583,15.775
+		c0.092,0.139,0.249,0.225,0.417,0.225s0.324-0.085,0.417-0.225C12.727,23.313,20,12.25,20,8.006C20,3.595,16.411,0.006,12,0.006z
+		 M12,11.506c-1.93,0-3.5-1.571-3.5-3.5c0-1.929,1.57-3.5,3.5-3.5c1.93,0,3.5,1.571,3.5,3.5C15.5,9.935,13.93,11.506,12,11.506z"/>
+</g>
+<g id="Outline_Icons">
+	<g>
+		<path style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="M19.5,8
+			c0,4.144-7.5,15.5-7.5,15.5S4.5,12.144,4.5,8c0-4.142,3.357-7.5,7.5-7.5C16.143,0.5,19.5,3.858,19.5,8z"/>
+		
+			<circle style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" cx="12" cy="8" r="3"/>
+	</g>
+</g>
+</svg>

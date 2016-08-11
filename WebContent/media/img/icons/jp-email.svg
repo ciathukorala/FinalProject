@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-89 91 120 120" style="enable-background:new -89 91 120 120;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;fill:none;stroke:#000000;stroke-width:0.2;stroke-miterlimit:10;}
+	.st1{display:none;}
+	.st2{display:inline;fill:none;stroke:#B1BBC3;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#5A6166;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<path id="XMLID_1_" class="st0" d="M-169,383h-76c-6.6,0-12-5.4-12-12v-76c0-6.6,5.4-12,12-12h76c6.6,0,12,5.4,12,12v76
+	C-157,377.6-162.4,383-169,383z"/>
+<g id="XMLID_21_" class="st1">
+	<path id="XMLID_19_" class="st2" d="M-217.5,344.8l-25.4,7c-6.3,2.3-10.4,8.3-10.4,15v10h92.1v-10c0-6.7-4.1-12.7-10.4-15l-25.3-7"
+		/>
+	<path id="XMLID_18_" class="st2" d="M-219.2,320.8c0-2.2,1.8-2,4-2s4-0.2,4,2"/>
+	<path id="XMLID_17_" class="st2" d="M-203.2,320.8c0-2.2,1.8-2,4-2s4-0.2,4,2"/>
+	<path id="XMLID_16_" class="st2" d="M-227.2,309.4v7.4c-6,0-6,12,0,12c0,12,14,20.1,20,20.1"/>
+	<path id="XMLID_15_" class="st2" d="M-187.2,309.4v7.4c6,0,6,12,0,12c0,12-14,20.1-20,20.1"/>
+	<polygon id="XMLID_14_" class="st2" points="-189.2,356.8 -177.1,356.8 -177.1,364.9 -183.2,368.9 -189.2,364.9 	"/>
+	<polygon id="XMLID_13_" class="st2" points="-209.2,290.8 -205.2,290.8 -205.2,294.8 -207.2,296.8 -209.2,294.8 	"/>
+	<path id="XMLID_12_" class="st2" d="M-207.2,312.8c-24,0-24-8-24-8h48.1C-183.2,304.8-183.2,312.8-207.2,312.8z"/>
+	<path id="XMLID_11_" class="st2" d="M-179.2,304.8h-56c0,0,0-6,0-10c14,0,14-10,28-10s16,10,28,10
+		C-179.1,298.8-179.2,304.8-179.2,304.8z"/>
+	<line id="XMLID_10_" class="st2" x1="-213.2" y1="347.3" x2="-213.2" y2="376.9"/>
+	<line id="XMLID_8_" class="st2" x1="-201.2" y1="347.2" x2="-201.2" y2="376.9"/>
+</g>
+<g>
+	<path class="st3" d="M19.2,176.2c0,3.8-3.1,6.9-6.9,6.9h-82.7c-3.8,0-6.9-3.1-6.9-6.9v-50.5c0-3.8,3.1-6.9,6.9-6.9h82.7
+		c3.8,0,6.9,3.1,6.9,6.9C19.2,125.8,19.2,176.2,19.2,176.2z"/>
+	<polyline class="st3" points="16.9,121.1 -29,157.8 -75,121.1 	"/>
+</g>
+</svg>
