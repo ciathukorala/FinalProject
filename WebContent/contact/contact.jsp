@@ -51,7 +51,7 @@
 							<li><a href="#">About</a></li>
 							<li><a href="../rentOut/rent.jsp">location</a></li>							
 							<li><a href="../rentSpace/rentHome.jsp">Rent out</a></li>
-							<li><a href="#">User Profile</a></li>	
+							<li><a href="#">Profile</a></li>	
 							<li><a href="contact.jsp">Contact Us</a></li>
 						</ul>
                 </div>

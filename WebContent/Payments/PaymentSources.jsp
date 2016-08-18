@@ -93,7 +93,7 @@
     <h2>Add a Credit/Debit card</h2>
     <form class="form-horizontal" method="post" action="../BankServlet">
 		<div class="form-group">
-            <label class="control-label col-xs-4" ><img src="../images/C:/project/ParkingSystem/WebContent/images/download.jpg" class="img-circle" alt="Cinque Terre" width="50" height="40"></label>
+            <label class="control-label col-xs-4" ><img src="../images/download.jpg" class="img-circle" alt="Cinque Terre" width="50" height="40"></label>
             <div class="col-xs-4">
                 <h5><b>Secure credit card payment</b></h5>
             </div>
@@ -114,7 +114,7 @@
 				<h6>The number on the front of your credit card</h6>
             </div>
 			<div class="col-xs-2">
-               <img src="C:\Users\Ishara\Desktop\master.jpg" class="img" alt="Cinque Terre" width="100" height="40">
+               <img src="../images/master.jpg" class="img" alt="Cinque Terre" width="100" height="40">
             </div>
         </div>
 		<div class="form-group">
