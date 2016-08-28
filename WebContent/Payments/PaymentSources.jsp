@@ -135,28 +135,28 @@
   <thead class="thead-inverse">
     <tr>
       <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th>Name</th>
+      <th>Transaction Type</th>
+      <th>Amount</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>Ishara</td>
+      <td>Payment</td>
+      <td>1000</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>Ishara</td>
+      <td>Piyumi</td>
+      <td>Vimanshi</td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
+      <td>Payment</td>
+      <td>Payment</td>
       <td>@twitter</td>
     </tr>
   </tbody>
