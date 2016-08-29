@@ -92,6 +92,7 @@
 							<li><a href="rentOut/rent.jsp">location</a></li>							
 							<li><a href="rentSpace/rentHome.jsp">Rent out</a></li>	
 							<li><a href="contact/contact.jsp">Contact Us</a></li>
+							<li><a href="parks/parkingMap.jsp">Parks</a></li>
 						</ul>
                 </div>
 				<!--- //End-top-nav---->
