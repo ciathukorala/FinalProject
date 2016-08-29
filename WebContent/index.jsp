@@ -88,7 +88,7 @@
 				<div class="top-nav">
 						<ul class="flexy-menu thick orange">
 							<li><a href="index.jsp">Home</a></li>
-							<li><a href="#">About</a></li>
+							<li><a href="AboutUs/About.jsp">About</a></li>
 							<li><a href="rentOut/rent.jsp">location</a></li>							
 							<li><a href="rentSpace/rentHome.jsp">Rent out</a></li>	
 							<li><a href="contact/contact.jsp">Contact Us</a></li>
