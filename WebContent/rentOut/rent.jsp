@@ -16,8 +16,8 @@
 		<div class="o-section o-section--park o-section--short c-srp-header">
 			<div class="c-srp-header__container">
 				<div class="c-srp-header__item">
-					<a href="../index.html"> <img class="c-srp-header__logo"
-						src="../media/img/logos/justpark-all-white.svg" />
+					<a href="../index.html"> <!--  <img class="c-srp-header__logo"
+						src="../media/img/logos/justpark-all-white.svg" /> -->
 					</a>
 				</div>
 				<div class="c-srp-header__item c-srp-header__form">
