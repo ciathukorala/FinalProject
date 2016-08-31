@@ -6,6 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link href="../css/style.css" rel='stylesheet' type='text/css' />
 <link rel="stylesheet" href="../css/styleSignPage.css" type="text/css" />
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <title>Easy Parking Sign</title>
 </head>
 <body background="images/sign.jpg">
@@ -56,14 +60,33 @@
 			</div>
 			<!---//End-header---->
 	
-<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" image src=""></iframe>
-					
+		<div class="images-slider">
+			<!-- start slider -->
+		    <div id="fwslider">
+		        <div class="slider_container">
+		            <div class="slide"> 
+		                <!-- Slide image -->
+		                <img src="../images/hero-refer-a-friend.jpg" size="1000x300" alt=""/>	
+		            </div>
+		         </div>
+		      </div>
+		   </div>					
 
+<br>
+<div class="container-fluid">
+  <h1>What is Easy Park?</h1>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10" ><p class="text-justify">Easy Park is Sri-Lankan leading provider of pre-bookable parking. The idea is simple: we connect drivers with anyone who has a spare space - whether that's in a car park, private driveway, church, school, or pub.
 
+In city centres or near airports, for sports matches or the daily commute, JustPark's website lets drivers find, book and pay for parking in seconds - wherever and whenever they need it. Choose your perfect spot from over 1000 spaces in 10 different cities - or rent yours out when it's not being used.
 
- 
-        
-		           
+We take the stress out of parking for over one million drivers. Our spaces are up to 70% cheaper than traditional pay-and-display, plus there's zero risk of [you] getting a parking ticket. And on the flipside, we've earned property owners and businesses over renting out their underused spaces for them - so everyone's a winner.</p>
+</div>
+    <div class="col-sm-1"></div>
+  </div>
+</div>
+	<br><br>	           
 		<!----start-footer---->
 		<div class="footer">
 			<div class="wrap">
