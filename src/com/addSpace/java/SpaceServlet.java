@@ -49,6 +49,8 @@ public class SpaceServlet extends HttpServlet {
 		String Name = request.getParameter("Name");
 		String PhoneNumber = request.getParameter("PhoneNumber");
 		String Address = request.getParameter("Address");
+		String longitude = request.getParameter("longitude");
+		String latitude = request.getParameter("latitude");		
 		String slots = request.getParameter("slots");
 		String Description = request.getParameter("Description");
 		String Instruction = request.getParameter("Instruction");
@@ -59,6 +61,8 @@ public class SpaceServlet extends HttpServlet {
 		initialVariable2.setName(Name);
 		initialVariable2.setPhoneNumber(PhoneNumber);
 		initialVariable2.setAddress(Address);
+		initialVariable2.setLongitude(longitude);
+		initialVariable2.setLatitude(latitude);
 		initialVariable2.setSlots(slots);
 		initialVariable2.setDescription(Description);
 		initialVariable2.setInstruction(Instruction);

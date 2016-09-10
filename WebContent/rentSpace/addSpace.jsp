@@ -85,7 +85,7 @@
 							<td>Address -:<input type="text" name="Address"
 								placeholder="Address" required />
 							</td>
-						</tr>
+						</tr>						
 						<tr>
 							<td>No of Parking Slots -:<input type="text" name="slots"
 								placeholder="No.OF Slots" required />

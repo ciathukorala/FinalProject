@@ -57,7 +57,7 @@
 							class="o-field c-srp-form__grow-field c-srp-form__location-field">
 							<input value="Hyde Park"
 								analytics-track="Search Form - Location Autocomplete"
-								class="o-field__input o-field__input--text" autocomplete="off"
+								class="o-field__input o-field__input--text" autocomplete="on"
 								placeholder="Enter a location" id="id_q" name="q"
 								track="click:search-results:autocomplete" type="text" />
 						</div>
