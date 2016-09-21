@@ -37,7 +37,7 @@ public class SpaceDbManager {
 			e.printStackTrace();
 		}
 
-		String sql = "INSERT INTO addspace(Name,PhoneNumber,Address,longitude,latitude,slots,Description,Instruction,price) VALUES (?,?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO addspace(Name,PhoneNumber,Address,longitude,latitude,slots,Description,Instruction,price,parkingimg) VALUES (?,?,?,?,?,?,?,?,?,?)";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 
 		pstmt.setString(1, set2.getName());
@@ -49,6 +49,7 @@ public class SpaceDbManager {
 		pstmt.setString(7, set2.getDescription());
 		pstmt.setString(8, set2.getInstruction());
 		pstmt.setString(9, set2.getPrice());
+		pstmt.setString(10,set2.getItemName());
 		pstmt.executeUpdate();
 		com.connection.java.ConnectionManager.getInstance().close();
 	}

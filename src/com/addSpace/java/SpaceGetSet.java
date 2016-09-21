@@ -10,6 +10,15 @@ public class SpaceGetSet {
 	private String Description;
 	private String Instruction;
 	private String price;
+	private String itemName;
+
+	public String getItemName() {
+		return itemName;
+	}
+
+	public void setItemName(String itemName) {
+		this.itemName = itemName;
+	}
 
 	public String getLongitude() {
 		return longitude;

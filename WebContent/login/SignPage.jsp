@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../css/styleSignPage.css" type="text/css" />
 <title>Easy Parking Sign</title>
 </head>
-<body background="images/sign.jpg">
+<body ">
 	<!---//header-bar---->
 			<div class="top-header" id="header"> 
 				<div class="wrap">
@@ -57,7 +57,7 @@
 			<!---//End-header---->
 	
 	<div id="login-form">
-	<form name="login" method="post" action="RegServlet">
+	<form name="login" action="../loginServlet" method="post"  class="form-horizontal">
 		<input type="hidden" name="pagename" value="login">
     	<table width="30%" align="right" border="0" style=" transform-origin:top;">
 			<tr>

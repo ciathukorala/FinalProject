@@ -108,6 +108,10 @@
 							</td>
 						</tr>
 						<tr>
+							<td>Images of the Park -:<input type="file" name="ParkImage"  placeholder=" Image of the Parking Place" multiple="multiple"/>
+							</td>
+						</tr>
+						<tr>
 							<td>
 								<button type="submit" name="submit">Submit</button>
 							</td>
