@@ -69,7 +69,7 @@
 		<center>
 			<h1>Add Your Valuble Space</h1>
 			<div id="login-form">
-				<form method="post" action="../SpaceServlet">
+				<form method="post" action="../SpaceServlet" enctype="multipart/form-data">
 					<table align="center" width="50%" border="0">
 						<tr>
 							<td>Owners Name -:<input type="text" name="Name"

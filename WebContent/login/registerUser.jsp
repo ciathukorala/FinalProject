@@ -87,14 +87,14 @@
 <div class="form-group control-group required">
    <label for="id_email" class="sr-only control-label">Email address</label>
    <div class="controls">
-        <input type="email" value="" class="phorm_field_email has-tooltip" name="Email" />
+        <input type="email" value="" class="phorm_field_email has-tooltip" name="Email" required/>
    </div>
 </div>
             		
 <div class="form-group control-group required">
    <label for="id_password" class="sr-only control-label">Password</label>
    <div class="controls">
-        <input type="password" value="" minlength="6" class="phorm_field_password" name="PassWord" />
+        <input type="password" value="" minlength="6" class="phorm_field_password" name="PassWord" required/>
         <p class="help-block">Please choose a secure password (min. 6 characters)</p>
    </div>
 </div>
@@ -105,28 +105,9 @@
         <input type="text" value="" class="phorm_field_password" name="PhoneNumber" />
    </div>
 </div>
-
-<!--           
-<div class="form-group control-group">
-   <label for="id_referral_type" class="sr-only control-label">How did you find us?</label>
-   <div class="controls">
-   <select  class="phorm_field_dropdown" id="id_referral_type" name="referral_type" >
-   		<option  value="" >Please select...</option>
-		<option  value="Search engine" >Search engine</option>
-		<option  value="Newspaper" >Newspaper</option>
-		<option  value="TV" >TV</option>
-		<option  value="Radio" >Radio</option>
-		<option  value="Magazines" >Magazines</option>
-		<option  value="Flyers" >Flyers</option>
-		<option  value="Elsewhere online" >Elsewhere online</option>
-		<option  value="Word of mouth" >Word of mouth</option>
-		<option  value="Other" >(Other)</option>
-	</select>
-    </div>
-</div>  --> 
-            		
-<div class="form-group control-group">
-    <label for="id_referral_details" class="sr-only control-label">Additional details</label>
+   		
+<div class="form-group control-group required">
+   <label class="sr-only control-label">Additional details</label>
     <div class="controls">
     <input type="text" value="" class="phorm_field_text" name="AdditionDetails" />
     <p class="help-block">Any further information about how you heard about us</p>
@@ -141,8 +122,6 @@
     <p class="help-block">General information about exciting and important updates to the website as well as advice on how to make 	the most of our service</p>
     </div>
 </div>
-            
-<p class="intro">I have read and agree to the JustPark <a href="../overlay/terms-and-conditions/index.html" rel="overlay" data-toggle="modal">terms and conditions</a></p>
 
 </div>
 

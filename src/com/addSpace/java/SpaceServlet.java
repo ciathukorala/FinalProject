@@ -4,10 +4,12 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 
 import com.contact.java.ContactDbManager;
 import com.contact.java.ContactGetSet;
@@ -34,18 +36,9 @@ import java.sql.Statement;
  * Servlet implementation class SpaceServlet
  */
 @WebServlet("/SpaceServlet")
-public class SpaceServlet extends HttpServlet {
-	
-	
-	
-	
-	
-	
-	
-	
-	
+@MultipartConfig(maxFileSize = 16177215)   
+public class SpaceServlet extends HttpServlet {	
 	private static final long serialVersionUID = 1L;
-
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
@@ -72,59 +65,20 @@ public class SpaceServlet extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
-/*		String itemName = "";
-	     try (PrintWriter out = response.getWriter()) {
-	            String ImageFile = "";
-	            
-	           
-	            boolean isMultipart = ServletFileUpload.isMultipartContent(request);
-	if (!isMultipart)
-	{
-	}
-	else
-	{
-	FileItemFactory factory = new DiskFileItemFactory();
-	ServletFileUpload upload = new ServletFileUpload(factory);
-	List items = null;
-	try
-	{
-	items = upload.parseRequest(request);
-	}
-	catch (FileUploadException e)
-	{
-	e.getMessage();
-	}
-	 
-	Iterator itr = items.iterator();
-	while (itr.hasNext())
-	{
-	FileItem item = (FileItem) itr.next();
-	if (item.isFormField())
-	{
-	String name = item.getFieldName();
 
-	String value = item.getString();
-
-	}
-	else
-	{
-	try
-	{
-
-	itemName= item.getName();
-	File savedFile = new File("C:\\project\\ParkingSystem\\WebContent\\ParkingImages\\"+itemName);
-	item.write(savedFile);
-
-	}
-	catch (Exception e)
-	{
-	out.println("Error"+e.getMessage());
-	}
-	}
-	}
-
-	}
-	}*/
+		 InputStream inputStream = null; // input stream of the upload file
+         
+	        // obtains the upload file part in this multipart request
+	        Part filePart = request.getPart("ParkImage");
+	        if (filePart != null) {
+	            // prints out some information for debugging
+	            System.out.println(filePart.getName());
+	            System.out.println(filePart.getSize());
+	            System.out.println(filePart.getContentType());
+	             
+	            // obtains input stream of the upload file
+	            inputStream = filePart.getInputStream();
+	        }	        
 
 		String Name = request.getParameter("Name");
 		String PhoneNumber = request.getParameter("PhoneNumber");
@@ -147,6 +101,7 @@ public class SpaceServlet extends HttpServlet {
 		initialVariable2.setDescription(Description);
 		initialVariable2.setInstruction(Instruction);
 		initialVariable2.setPrice(price);
+		initialVariable2.setInputStream(inputStream);
 		//initialVariable2.setItemName(itemName);
 
 		try {

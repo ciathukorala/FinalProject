@@ -56,8 +56,24 @@
 				<div class="wrap">
 				<div class="top-header-left">
 					<ul>
-						<li><a href="login/SignPage.jsp"><span> </span> Agent Login</a></li>
-						<li><p><span> </span>Not a Member ? </p>&nbsp;<a class="reg" href="login/registerUser.jsp"> Register</a></li>
+					<li><%
+						String userName=(String)session.getAttribute("userName");
+		                String userRole=(String)session.getAttribute("userRole");
+		                
+						if(userName != null){
+							out.println("<p class='contact-info'>Welcome "+userName+"</p>");			
+						}else{
+							out.println("<a href='login/SignPage.jsp'><span> </span>Login</a>");
+						}						
+						%></li>
+						<li><%
+						if(userName != null){
+							out.println("<p><span> </span>Update Profaile? </p>&nbsp;<a class='reg' href='/loginServlet'>Update</a>");			
+						}else{
+							out.println("<p><span> </span>Not a Member ? </p>&nbsp;<a class='reg' href='login/registerUser.jsp'> Register</a>");
+						}						
+						%>
+						</li>
 						<li><p class="contact-info">Call Us Now :071-3879092</p></li>
 						<div class="clear"> </div>
 					</ul>
@@ -67,7 +83,7 @@
 						<li><a class="face" href="#"><span> </span></a></li>
 						<li><a class="twit" href="#"><span> </span></a></li>
 						<li><a class="thum" href="#"><span> </span></a></li>
-						<li><a class="pin" href="#"><span> </span></a></li>
+						<li><a class="pin" href="/loginServlet"><span> </span></a></li>
 						<div class="clear"> </div>
 					</ul>
 				</div>
@@ -100,6 +116,7 @@
 			</div>
 			<!---//End-header---->
 		</div>
+		
 		<!----start-images-slider---->
 		<div class="images-slider">
 			<!-- start slider -->

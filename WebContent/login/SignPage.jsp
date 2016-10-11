@@ -56,6 +56,8 @@
 			</div>
 			<!---//End-header---->
 	
+	
+	<tr>name="<%= request.getAttribute("Email") %>"</tr> 
 	<div id="login-form">
 	<form name="login" action="../loginServlet" method="post"  class="form-horizontal">
 		<input type="hidden" name="pagename" value="login">

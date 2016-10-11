@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 
 public class DbManager {
@@ -11,6 +12,11 @@ public class DbManager {
 	public static void Insert(GetSet set) throws ClassNotFoundException, SQLException{
 		Connection conn = com.connection.java.ConnectionManager.getInstance().getConnection();
 		System.out.println("reg db manager");
+		ResultSet resultSet = null;
+		//call mail send clz
+		
+		if(set.getEmail()!=null){
+		com.mail.password.mailPW.mail();
 		
 		String sql = "INSERT INTO register(FirstName,lastName,Email,PassWord,PhoneNumber,AdditionDetails,Role) VALUES (?,?,?,?,?,?,'User')";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -24,29 +30,24 @@ public class DbManager {
 		pstmt.executeUpdate();
 		com.connection.java.ConnectionManager.getInstance().close();
 		
-	}
-	
-	public static int checkUser(GetSet get) throws ClassNotFoundException, SQLException{
-		//Class.forName("com.mysql.jdbc.Driver");
-		Connection conn = com.connection.java.ConnectionManager.getInstance().getConnection();
-		String email = get.getEmail();
-		System.out.println(email);
-		String sql = "SELECT * FROM register WHERE Email=?";
-		PreparedStatement pstmt = conn.prepareStatement(sql);
-		//ResultSet rs = pstmt.executeQuery();
-		
-		pstmt.setString(1,get.getEmail());
-		//pstmt.setString(2,get.getLastName());
-		ResultSet rs = pstmt.executeQuery();
-		System.out.println(rs);
-		
-		int count =0;
-		while(rs.next()){
-			count = rs.getInt(1);
+		set.setFirstName("Success");;
+		}else{
+			
+			Statement statement = conn.createStatement();
+			String query = "SELECT * FROM register where Email='isharaathukorala@gmail.com' AND PassWord='1234qwer$'";
+			resultSet = statement.executeQuery(query);
+			
+			
+			while (resultSet.next()) {
+				set.setFirstName(resultSet.getString(2));
+				set.setLastName(resultSet.getString(3));
+				set.setEmail(resultSet.getString(4));
+				set.setPassWord(resultSet.getString(5));
+				set.setPhoneNumber(resultSet.getString(6));
+				set.setAdditionDetails(resultSet.getString(7));
+				System.out.println(resultSet.getString(2) + resultSet.getString(3) + resultSet.getString(4) + resultSet.getString(5) +resultSet.getString(6) +resultSet.getString(7));
+			}
+			
 		}
-		com.connection.java.ConnectionManager.getInstance().close();
-		return count;
-		
-	}
-	
+	}	
 }

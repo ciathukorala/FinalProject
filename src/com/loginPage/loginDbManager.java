@@ -26,6 +26,8 @@ public class loginDbManager {
 			while (resultSet.next()) {
 				set.setResultEmail(resultSet.getString(4));
 				set.setResultPassWord(resultSet.getString(5));
+				set.setResultFirstName(resultSet.getString(2));
+				set.setResultRole(resultSet.getString(8));
 				System.out.println(resultSet.getString(1) + resultSet.getString(2) + resultSet.getString(3));
 			}
 			

@@ -1,5 +1,7 @@
 package com.addSpace.java;
 
+import java.io.InputStream;
+
 public class SpaceGetSet {
 	private String Name;
 	private String PhoneNumber;
@@ -11,6 +13,15 @@ public class SpaceGetSet {
 	private String Instruction;
 	private String price;
 	private String itemName;
+	private InputStream inputStream;
+
+	public InputStream getInputStream() {
+		return inputStream;
+	}
+
+	public void setInputStream(InputStream inputStream2) {
+		this.inputStream = inputStream2;
+	}
 
 	public String getItemName() {
 		return itemName;

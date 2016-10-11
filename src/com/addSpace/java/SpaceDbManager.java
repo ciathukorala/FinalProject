@@ -5,7 +5,9 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -37,6 +39,7 @@ public class SpaceDbManager {
 			e.printStackTrace();
 		}
 
+		if(set2.getName()!=null){
 		String sql = "INSERT INTO addspace(Name,PhoneNumber,Address,longitude,latitude,slots,Description,Instruction,price,parkingimg) VALUES (?,?,?,?,?,?,?,?,?,?)";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 
@@ -49,12 +52,49 @@ public class SpaceDbManager {
 		pstmt.setString(7, set2.getDescription());
 		pstmt.setString(8, set2.getInstruction());
 		pstmt.setString(9, set2.getPrice());
-		pstmt.setString(10,set2.getItemName());
+		
+		 if (set2.getInputStream() != null) {
+             // fetches input stream of the upload file for the blob column
+			 pstmt.setBlob(10, set2.getInputStream());
+         }
+
+         // sends the statement to the database server
+      		
 		pstmt.executeUpdate();
 		com.connection.java.ConnectionManager.getInstance().close();
+		}
+		
+		
+		//retrive DB values
+		ResultSet resultSet = null;
+		try {
+			Statement statement = conn.createStatement();
+			String query = "SELECT * FROM addspace";
+			resultSet = statement.executeQuery(query);
+			
+			while (resultSet.next()) {
+				set2.setName(resultSet.getString(2));
+				set2.setPhoneNumber(resultSet.getString(3));
+				set2.setAddress(resultSet.getString(4));
+				set2.setLongitude(resultSet.getString(5));
+				set2.setLatitude(resultSet.getString(6));
+				set2.setSlots(resultSet.getString(7));
+				set2.setDescription(resultSet.getString(8));
+				set2.setInstruction(resultSet.getString(9));
+				set2.setPrice(resultSet.getString(10));
+				System.out.println(resultSet.getString(2) + resultSet.getString(3) + resultSet.getString(4)+ resultSet.getString(5) + resultSet.getString(6)+ resultSet.getString(7) + resultSet.getString(8)+ resultSet.getString(9) + resultSet.getString(10)+ resultSet.getString(11));
+			}			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	
+	
+	
+	
+	//get longitude latitude values
 	 public static String[] getLatLongPositions(String address) throws Exception
 	  {
 	    int responseCode = 0;

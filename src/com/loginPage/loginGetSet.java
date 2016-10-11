@@ -6,7 +6,21 @@ public class loginGetSet {
 	private String PassWord;
 	private String resultEmail;
 	private String resultPassWord;
+	private String resultFirstName;
+	private String resultRole;
 	
+	public String getResultFirstName() {
+		return resultFirstName;
+	}
+	public void setResultFirstName(String resultFirstName) {
+		this.resultFirstName = resultFirstName;
+	}
+	public String getResultRole() {
+		return resultRole;
+	}
+	public void setResultRole(String resultRole) {
+		this.resultRole = resultRole;
+	}
 	public String getResultEmail() {
 		return resultEmail;
 	}

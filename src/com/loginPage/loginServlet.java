@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.contact.java.ContactDbManager;
 import com.contact.java.ContactGetSet;
@@ -57,6 +58,16 @@ public class loginServlet extends HttpServlet {
 			
 			//redirect page
 			if(initialVariable.getEmail().equals(initialVariable.getResultEmail())&&initialVariable.getPassWord().equals(initialVariable.getResultPassWord())){
+			
+			//set session veriables
+				
+				 HttpSession session=request.getSession();
+		         session.setAttribute("userName",initialVariable.getResultFirstName());
+		         session.setAttribute("userRole",initialVariable.getResultRole());
+		         
+		         request.setAttribute("Email", initialVariable.getResultEmail());
+		         request.setAttribute("Role", initialVariable.getResultRole());
+				
 			String nextJSP = "/index.jsp";
 			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
 			dispatcher.forward(request,response);}else{

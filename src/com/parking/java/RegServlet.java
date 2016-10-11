@@ -3,11 +3,13 @@ package com.parking.java;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class RegServlet
@@ -65,42 +67,30 @@ public class RegServlet extends HttpServlet {
 
 		try {
 			DbManager.Insert(initial);
+			
+			//redirect page
+			if(initial.getFirstName()=="Success"){			
+			String nextJSP = "/index.jsp";
+			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
+			dispatcher.forward(request,response);}else{
+				
+				//update Value
+				 request.setAttribute("FirstName", initial.getFirstName());
+		         request.setAttribute("LastName", initial.getLastName());
+		    	 request.setAttribute("Email", initial.getEmail());
+		         request.setAttribute("PassWord", initial.getPassWord());
+		    	 request.setAttribute("PhoneNumber", initial.getPhoneNumber());
+		         request.setAttribute("AdditionDetails", initial.getAdditionDetails());
+		         
+		         String nextJSP = "/index.jsp";
+					RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
+					dispatcher.forward(request,response);
+			}
+			
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 		// }
-
-		if (hdnParam.equals("login")) {
-			System.out.println("con log");
-			String email = request.getParameter("Email");
-			String passWord = request.getParameter("PassWord");
-			if ((Email.equals("admin")) & (PassWord.equals("admin"))) {
-				response.sendRedirect("admin.jsp");
-			} else {
-				GetSet initials = new GetSet();
-
-				initials.setEmail(email);
-				initials.setPassWord(passWord);
-
-				try {
-					int checkUser = DbManager.checkUser(initial);
-					if (checkUser == 1) {
-						response.sendRedirect("welcome.jsp");
-					} else {
-						response.sendRedirect("login.jsp");
-					}
-				} catch (ClassNotFoundException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-		}
-
 	}
-
 }

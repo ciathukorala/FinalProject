@@ -15,10 +15,18 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="org.apache.commons.fileupload.jar"/>
-	<classpathentry kind="lib" path="activation.jar"/>
+	<classpathentry kind="lib" path="activation.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="com.lowagie.text-2.1.7.jar"/>
 	<classpathentry kind="lib" path="itextpdf-5.1.0.jar"/>
-	<classpathentry kind="lib" path="mail.jar"/>
+	<classpathentry kind="lib" path="mail.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="org.apache.commons.io.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
