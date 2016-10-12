@@ -83,7 +83,7 @@
 						<li><a class="face" href="#"><span> </span></a></li>
 						<li><a class="twit" href="#"><span> </span></a></li>
 						<li><a class="thum" href="#"><span> </span></a></li>
-						<li><a class="pin" href="/loginServlet"><span> </span></a></li>
+						<li><a class="pin" href="RegServlet" method="POST"><span> </span></a></li>
 						<div class="clear"> </div>
 					</ul>
 				</div>

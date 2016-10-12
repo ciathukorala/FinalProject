@@ -34,6 +34,36 @@ public class RegServlet extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+
+		String sessionVal = (String) request.getSession(false).getAttribute("userName");
+		
+		System.out.print("Update Profile");
+		GetSet initial = new GetSet();
+
+		try {
+			DbManager.Insert(initial);
+
+			// update Value
+			request.setAttribute("FirstName", initial.getFirstName());
+			request.setAttribute("LastName", initial.getLastName());
+			request.setAttribute("Email", initial.getEmail());
+			request.setAttribute("PassWord", initial.getPassWord());
+			request.setAttribute("PhoneNumber", initial.getPhoneNumber());
+			request.setAttribute("AdditionDetails", initial.getAdditionDetails());
+
+			if (sessionVal != null) {
+				System.out.println("tedirect");
+			String nextJSP = "/registerNewUser.jsp";
+			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
+			dispatcher.forward(request, response); return;
+			}
+
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		
 	}
 
 	/**
@@ -47,7 +77,6 @@ public class RegServlet extends HttpServlet {
 		System.out.println("Hiii ela");
 
 		String hdnParam = request.getParameter("pagename");
-		// if(hdnParam.equals("register")){
 		System.out.println("reg conect");
 		String FirstName = request.getParameter("FirstName");
 		String LastName = request.getParameter("LastName");
@@ -67,30 +96,19 @@ public class RegServlet extends HttpServlet {
 
 		try {
 			DbManager.Insert(initial);
-			
-			//redirect page
-			if(initial.getFirstName()=="Success"){			
-			String nextJSP = "/index.jsp";
-			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
-			dispatcher.forward(request,response);}else{
+
+			// redirect page
+			if (initial.getFirstName() == "Success") {
+				response.sendRedirect("index.jsp"); 
 				
-				//update Value
-				 request.setAttribute("FirstName", initial.getFirstName());
-		         request.setAttribute("LastName", initial.getLastName());
-		    	 request.setAttribute("Email", initial.getEmail());
-		         request.setAttribute("PassWord", initial.getPassWord());
-		    	 request.setAttribute("PhoneNumber", initial.getPhoneNumber());
-		         request.setAttribute("AdditionDetails", initial.getAdditionDetails());
-		         
-		         String nextJSP = "/index.jsp";
-					RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
-					dispatcher.forward(request,response);
+			} else {
+
 			}
-			
+
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// }
+	
 	}
 }
