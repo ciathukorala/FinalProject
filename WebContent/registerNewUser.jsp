@@ -64,7 +64,7 @@
 					Register <span>for an account</span><i class="icon-lock"></i>
 				</div>
 
-				<form name="registation" action="RegServlet" method="post"
+				<form name="registation" action="UpdateRegServlet" method="post"
 					class="form-horizontal">
 					<input type="hidden" name="pagename" value="register ">
 					<div class="modal-body">
@@ -93,8 +93,9 @@
 										value="<%=request.getAttribute("FirstName")%>"
 										class="input-smedium phorm_field_name"
 										placeholder="First Name" name="FirstName" /> <input
-										type="text" value="<%=request.getAttribute("LastName")%>" class="input-smedium phorm_field_name"
-										placeholder="Last name" name="LastName" />
+										type="text" value="<%=request.getAttribute("LastName")%>"
+										class="input-smedium phorm_field_name" placeholder="Last name"
+										name="LastName" />
 								</div>
 							</div>
 
@@ -110,7 +111,8 @@
 							<div class="form-group control-group required">
 								<label for="id_password" class="sr-only control-label">Password</label>
 								<div class="controls">
-									<input type="text" value="<%=request.getAttribute("PassWord")%>" minlength="6"
+									<input type="text"
+										value="<%=request.getAttribute("PassWord")%>" minlength="6"
 										class="phorm_field_password" name="PassWord" required />
 									<p class="help-block">Please choose a secure password (min.
 										6 characters)</p>
@@ -120,16 +122,18 @@
 							<div class="form-group control-group required">
 								<label class="sr-only control-label">Phone Number</label>
 								<div class="controls">
-									<input type="text" value="<%=request.getAttribute("PhoneNumber")%>" class="phorm_field_password"
-										name="PhoneNumber" />
+									<input type="text"
+										value="<%=request.getAttribute("PhoneNumber")%>"
+										class="phorm_field_password" name="PhoneNumber" />
 								</div>
 							</div>
 
 							<div class="form-group control-group required">
 								<label class="sr-only control-label">Additional details</label>
 								<div class="controls">
-									<input type="text" value="<%=request.getAttribute("AdditionDetails")%>" class="phorm_field_text"
-										name="AdditionDetails" />
+									<input type="text"
+										value="<%=request.getAttribute("AdditionDetails")%>"
+										class="phorm_field_text" name="AdditionDetails" />
 									<p class="help-block">Any further information about how you
 										heard about us</p>
 								</div>

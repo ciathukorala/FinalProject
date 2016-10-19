@@ -36,26 +36,32 @@ public class RegServlet extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 
 		String sessionVal = (String) request.getSession(false).getAttribute("userName");
-		
+		String sessionEmail = (String) request.getSession(false).getAttribute("Email");
+		String sessionPassWord = (String) request.getSession(false).getAttribute("passWord");
+
 		System.out.print("Update Profile");
 		GetSet initial = new GetSet();
-
+		initial.setSessionValue(sessionVal);
+		initial.setSessionEmail(sessionEmail);
+		initial.setSessionPassWord(sessionPassWord);
+		
 		try {
 			DbManager.Insert(initial);
 
 			// update Value
-			request.setAttribute("FirstName", initial.getFirstName());
-			request.setAttribute("LastName", initial.getLastName());
-			request.setAttribute("Email", initial.getEmail());
-			request.setAttribute("PassWord", initial.getPassWord());
-			request.setAttribute("PhoneNumber", initial.getPhoneNumber());
-			request.setAttribute("AdditionDetails", initial.getAdditionDetails());
-
 			if (sessionVal != null) {
-				System.out.println("tedirect");
-			String nextJSP = "/registerNewUser.jsp";
-			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
-			dispatcher.forward(request, response); return;
+				request.setAttribute("FirstName", initial.getFirstName());
+				request.setAttribute("LastName", initial.getLastName());
+				request.setAttribute("Email", initial.getEmail());
+				request.setAttribute("PassWord", initial.getPassWord());
+				request.setAttribute("PhoneNumber", initial.getPhoneNumber());
+				request.setAttribute("AdditionDetails", initial.getAdditionDetails());
+
+				System.out.println("redirect");
+				String nextJSP = "/registerNewUser.jsp";
+				RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
+				dispatcher.forward(request, response);
+				return;
 			}
 
 		} catch (ClassNotFoundException | SQLException e) {
@@ -63,7 +69,6 @@ public class RegServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 
-		
 	}
 
 	/**
@@ -99,8 +104,8 @@ public class RegServlet extends HttpServlet {
 
 			// redirect page
 			if (initial.getFirstName() == "Success") {
-				response.sendRedirect("index.jsp"); 
-				
+				response.sendRedirect("index.jsp");
+
 			} else {
 
 			}
@@ -109,6 +114,6 @@ public class RegServlet extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	
+
 	}
 }

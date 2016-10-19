@@ -16,7 +16,7 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
 public class mailPW {
-   public static void mail() {
+	public static void mail() {
       // Recipient's email ID needs to be mentioned.
       String to = "sendanayaka1992@gmail.com";
 

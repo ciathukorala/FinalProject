@@ -8,7 +8,22 @@
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
+    <welcome-file>payment.jsp</welcome-file>
   </welcome-file-list>
-  
-
+  <context-param>
+    <param-name>authtoken</param-name>
+    <param-value>cDwXnw3dN7eI-eU0fS0vuMkotJFsnINoEuFJ2a5GVzsrS9yorqcxGieGcnS</param-value>
+  </context-param>
+  <context-param>
+    <param-name>posturl</param-name>
+    <param-value>https://www.sandbox.paypal.com/cgi-bin/webscr</param-value>
+  </context-param>
+  <context-param>
+    <param-name>business</param-name>
+    <param-value>sendanayaka1992@gmail.com</param-value>
+  </context-param>
+  <context-param>
+    <param-name>returnurl</param-name>
+    <param-value>http://localhost:8080/ParkingSystem/PayPalController</param-value>
+  </context-param>
 </web-app>

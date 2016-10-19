@@ -64,6 +64,8 @@ public class loginServlet extends HttpServlet {
 				 HttpSession session=request.getSession();
 		         session.setAttribute("userName",initialVariable.getResultFirstName());
 		         session.setAttribute("userRole",initialVariable.getResultRole());
+		         session.setAttribute("Email",initialVariable.getResultEmail());
+		         session.setAttribute("passWord",initialVariable.getResultPassWord());		         
 		         
 		         //set select value to request
 		         request.setAttribute("Email", initialVariable.getResultEmail());

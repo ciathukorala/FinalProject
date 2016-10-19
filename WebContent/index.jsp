@@ -68,7 +68,7 @@
 						%></li>
 						<li><%
 						if(userName != null){
-							out.println("<p><span> </span>Update Profaile? </p>&nbsp;<a class='reg' href='/loginServlet'>Update</a>");			
+							out.println("<p><span> </span>Update Profaile? </p>&nbsp;<a class='reg' href='RegServlet' method='POST'>Update</a>");			
 						}else{
 							out.println("<p><span> </span>Not a Member ? </p>&nbsp;<a class='reg' href='login/registerUser.jsp'> Register</a>");
 						}						
@@ -83,7 +83,7 @@
 						<li><a class="face" href="#"><span> </span></a></li>
 						<li><a class="twit" href="#"><span> </span></a></li>
 						<li><a class="thum" href="#"><span> </span></a></li>
-						<li><a class="pin" href="RegServlet" method="POST"><span> </span></a></li>
+						<li><a class="pin" href="logOutPage" method="POST"><span> </span></a></li>
 						<div class="clear"> </div>
 					</ul>
 				</div>

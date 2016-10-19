@@ -91,13 +91,13 @@
    </div>
 </div>
             		
-<div class="form-group control-group required">
+<!-- <div class="form-group control-group required">
    <label for="id_password" class="sr-only control-label">Password</label>
    <div class="controls">
         <input type="password" value="" minlength="6" class="phorm_field_password" name="PassWord" required/>
         <p class="help-block">Please choose a secure password (min. 6 characters)</p>
    </div>
-</div>
+</div> -->
 
 <div class="form-group control-group required">
    <label class="sr-only control-label">Phone Number</label>

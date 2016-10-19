@@ -8,7 +8,28 @@ public class GetSet {
 	private String PassWord;
 	private String PhoneNumber;
 	private String AdditionDetails;
+	private String SessionValue;
+	private String sessionEmail;
+	private String sessionPassWord;
 	
+	public String getSessionEmail() {
+		return sessionEmail;
+	}
+	public void setSessionEmail(String sessionEmail) {
+		this.sessionEmail = sessionEmail;
+	}
+	public String getSessionPassWord() {
+		return sessionPassWord;
+	}
+	public void setSessionPassWord(String sessionPassWord) {
+		this.sessionPassWord = sessionPassWord;
+	}
+	public String getSessionValue() {
+		return SessionValue;
+	}
+	public void setSessionValue(String sessionValue) {
+		SessionValue = sessionValue;
+	}
 	public String getAdditionDetails() {
 		return AdditionDetails;
 	}
