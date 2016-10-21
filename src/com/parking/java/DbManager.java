@@ -35,9 +35,12 @@ public class DbManager {
 		}
 
 		if (set.getSessionValue() != null) {
-set.getSessionEmail();
+			String Email = set.getSessionEmail();
+			String PW = set.getSessionPassWord();
+			System.out.println("ggggg"+Email);
+			System.out.println("ggggg"+PW);
 			Statement statement = conn.createStatement();
-			String query = "SELECT * FROM register where Email='isharaathukorala@gmail.com' AND PassWord='1234qwer$'";
+			String query = "SELECT * FROM register where Email='"+Email+"'";
 			resultSet = statement.executeQuery(query);
 
 			while (resultSet.next()) {

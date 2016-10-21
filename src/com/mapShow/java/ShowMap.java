@@ -1,25 +1,28 @@
-package com.parking.java;
+package com.mapShow.java;
 
 import java.io.IOException;
 import java.sql.SQLException;
-
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.contact.java.ContactDbManager;
+import com.contact.java.ContactGetSet;
+
 /**
- * Servlet implementation class UpdateRegServlet
+ * Servlet implementation class ShowMap
  */
-@WebServlet("/UpdateRegServlet")
-public class UpdateRegServlet extends HttpServlet {
+@WebServlet("/ShowMap")
+public class ShowMap extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public UpdateRegServlet() {
+    public ShowMap() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -39,41 +42,33 @@ public class UpdateRegServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 		
-		System.out.println("Update servlet come");
-
-		String hdnParam = request.getParameter("pagename");
-		System.out.println("reg conect");
-		String FirstName = request.getParameter("FirstName");
-		String LastName = request.getParameter("LastName");
-		String Email = request.getParameter("Email");
-		String PassWord = request.getParameter("PassWord");
-		String PhoneNumber = request.getParameter("PhoneNumber");
-		String AdditionDetails = request.getParameter("AdditionDetails");
-
-		GetSet initial = new GetSet();
-
-		initial.setFirstName(FirstName);
-		initial.setLastName(LastName);
-		initial.setEmail(Email);
-		initial.setPassWord(PassWord);
-		initial.setPhoneNumber(PhoneNumber);
-		initial.setAdditionDetails(AdditionDetails);
-
+		String searchPlace = request.getParameter("searchPlace");
+		String start_date = request.getParameter("start_date");
+		String start_time = request.getParameter("start_time");
+		String end_date = request.getParameter("end_date");
+		String end_time = request.getParameter("end_time");
+		
+		System.out.print(searchPlace);
+		System.out.print(start_date);
+		System.out.print(start_time);
+		System.out.print(end_date);
+		System.out.print(end_time);
+		
+		mapGetSet mapinitial = new mapGetSet();
+		
+		mapinitial.setSearchPlace(searchPlace);
+		mapinitial.setStart_date(start_date);
+		mapinitial.setStart_time(start_time);
+		mapinitial.setEnd_date(end_date);
+		mapinitial.setEnd_time(end_time);
+				
 		try {
-			UpdateDbManager.Insert(initial);
-
-			// redirect page
-			if (initial.getFirstName() == "Success") {
-				response.sendRedirect("index.jsp");
-
-			} else {
-
-			}
-
+			mapDbManager.Insert(mapinitial);
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 	}
 
 }

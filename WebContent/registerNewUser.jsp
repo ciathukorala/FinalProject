@@ -10,7 +10,6 @@
 	href="media/compressed/css/core.minfda6.css?v=2.0.42" />
 </head>
 <body>
-
 	<!---//header-bar---->
 	<div class="top-header" id="header">
 		<div class="wrap">
@@ -44,11 +43,37 @@
 			<!--- start-top-nav---->
 			<div class="top-nav">
 				<ul class="flexy-menu thick orange">
-					<li><a href="../index.jsp">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="../rentOut/rent.jsp">location</a></li>
-					<li><a href="../rentSpace/rentHome.jsp">Rent out</a></li>
-					<li><a href="../contact/contact.jsp">Contact Us</a></li>
+					<li><a href="index.jsp">Home</a></li>
+					<li><a href="AboutUs/About.jsp">About</a></li>
+					<li>
+						<%
+							String userName = (String) session.getAttribute("userName");
+							if (userName != null) {
+								out.println("<a href='parks/parkingMap.jsp'>location</a>");
+							} else {
+								out.println("<a href='login/SignPage.jsp'>location</a>");
+							}
+						%>
+					</li>
+					<li>
+						<%
+							if (userName != null) {
+								out.println("<a href='rentSpace/rentHome.jsp'>Rent out</a>");
+							} else {
+								out.println("<a href='login/SignPage.jsp'>Rent out</a>");
+							}
+						%>
+					</li>
+					<li>
+						<%
+							if (userName != null) {
+								out.println("<a href='Payments/PaymentSources.jsp'>Profile</a>");
+							} else {
+								out.println("<a href='login/SignPage.jsp'>Profile</a>");
+							}
+						%>
+					</li>
+					<li><a href="contact/contact.jsp">Contact Us</a></li>
 				</ul>
 			</div>
 			<!--- //End-top-nav---->
@@ -104,7 +129,7 @@
 									address</label>
 								<div class="controls">
 									<input type="email" value="<%=request.getAttribute("Email")%>"
-										class="phorm_field_email has-tooltip" name="Email" required />
+										class="phorm_field_email has-tooltip" name="Email" readonly />
 								</div>
 							</div>
 
@@ -193,7 +218,7 @@
 
 				<div class="footer-grid address">
 					<div class="address-info">
-						<span><img src="../images/park.jpg"></span>
+						<span><img src="images/park.jpg"></span>
 					</div>
 				</div>
 

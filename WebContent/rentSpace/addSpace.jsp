@@ -18,12 +18,29 @@
 		<div class="wrap">
 			<div class="top-header-left">
 				<ul>
-					<li><a href="../login/SignPage.jsp"><span> </span> Agent
-							Login</a></li>
-					<li><p>
-							<span> </span>Not a Member ?
-						</p>&nbsp;<a class="reg" href="../login/registerUser.jsp">
-							Register</a></li>
+					<li>
+						<%
+							String userName = (String) session.getAttribute("userName");
+							String userRole = (String) session.getAttribute("userRole");
+
+							if (userName != null) {
+								out.println("<p class='contact-info'>Welcome " + userName + "</p>");
+							} else {
+								out.println("<a href='../login/SignPage.jsp'><span> </span>Login</a>");
+							}
+						%>
+					</li>
+					<li>
+						<%
+							if (userName != null) {
+								out.println(
+										"<p><span> </span>Update Profaile? </p>&nbsp;<a class='reg' href='RegServlet' method='POST'>Update</a>");
+							} else {
+								out.println(
+										"<p><span> </span>Not a Member ? </p>&nbsp;<a class='reg' href='../login/registerUser.jsp'> Register</a>");
+							}
+						%>
+					</li>
 					<li><p class="contact-info">Call Us Now :071-3879092</p></li>
 					<div class="clear"></div>
 				</ul>
@@ -52,9 +69,34 @@
 			<div class="top-nav">
 				<ul class="flexy-menu thick orange">
 					<li><a href="../index.jsp">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="../rentOut/rent.jsp">location</a></li>
-					<li><a href="rentHome.jsp">Rent out</a></li>
+					<li><a href="../AboutUs/About.jsp">About</a></li>
+					<li>
+						<%
+							if (userName != null) {
+								out.println("<a href='../parks/parkingMap.jsp'>location</a>");
+							} else {
+								out.println("<a href='../login/SignPage.jsp'>location</a>");
+							}
+						%>
+					</li>
+					<li>
+						<%
+							if (userName != null) {
+								out.println("<a href='../rentSpace/rentHome.jsp'>Rent out</a>");
+							} else {
+								out.println("<a href='../login/SignPage.jsp'>Rent out</a>");
+							}
+						%>
+					</li>
+					<li>
+						<%
+							if (userName != null) {
+								out.println("<a href='../Payments/PaymentSources.jsp'>Profile</a>");
+							} else {
+								out.println("<a href='../login/SignPage.jsp'>Profile</a>");
+							}
+						%>
+					</li>
 					<li><a href="../contact/contact.jsp">Contact Us</a></li>
 				</ul>
 			</div>
@@ -69,7 +111,8 @@
 		<center>
 			<h1>Add Your Valuble Space</h1>
 			<div id="login-form">
-				<form method="post" action="../SpaceServlet" enctype="multipart/form-data">
+				<form method="post" action="../SpaceServlet"
+					enctype="multipart/form-data">
 					<table align="center" width="50%" border="0">
 						<tr>
 							<td>Owners Name -:<input type="text" name="Name"
@@ -85,7 +128,7 @@
 							<td>Address -:<input type="text" name="Address"
 								placeholder="Address" required />
 							</td>
-						</tr>						
+						</tr>
 						<tr>
 							<td>No of Parking Slots -:<input type="text" name="slots"
 								placeholder="No.OF Slots" required />
@@ -108,7 +151,8 @@
 							</td>
 						</tr>
 						<tr>
-							<td>Images of the Park -:<input type="file" name="ParkImage"  placeholder=" Image of the Parking Place" multiple="multiple"/>
+							<td>Images of the Park -:<input type="file" name="ParkImage"
+								placeholder=" Image of the Parking Place" multiple="multiple" />
 							</td>
 						</tr>
 						<tr>

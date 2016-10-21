@@ -24,6 +24,9 @@
   </context-param>
   <context-param>
     <param-name>returnurl</param-name>
-    <param-value>http://localhost:8080/ParkingSystem/PayPalController</param-value>
+    <param-value>http://localhost:8080/ParkingSystem/payment.jsp</param-value>
   </context-param>
+  <session-config>
+    <session-timeout>1</session-timeout>
+  </session-config>
 </web-app>

@@ -28,5 +28,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="org.apache.commons.io.jar"/>
+	<classpathentry kind="lib" path="paypal_stubs.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
