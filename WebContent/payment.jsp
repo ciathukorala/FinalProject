@@ -14,9 +14,8 @@
 		<input type="hidden" name="tx" value=68E78904HY5824419>
 		<input type="hidden" name="business" value="${initParam['business']}">
 		
-		<input type="text" name="item_name_1" value="Product 1">
-		<input type="text" name="amount_1" value="10">
-		<input type="text" name="quantity_1" value="1">
+		<input type="text" name="item_name_1" value="Amount">
+		<input type="text" name="amount_1" value="10">		
 		<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" align="left" style="margin-right:7px;">
 		
 	</form>

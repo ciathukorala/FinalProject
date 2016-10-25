@@ -30,6 +30,7 @@ public class RegServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -80,7 +81,7 @@ public class RegServlet extends HttpServlet {
 		doGet(request, response);
 
 		System.out.println("Hiii ela");
-
+		
 		String hdnParam = request.getParameter("pagename");
 		System.out.println("reg conect");
 		String FirstName = request.getParameter("FirstName");
@@ -115,5 +116,15 @@ public class RegServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 
+	}
+	
+	public String getParkList() throws SQLException{
+System.out.println("IN JAVA");
+
+		DbManager dbMngr = new DbManager();
+		
+		String output = dbMngr.getPark();
+		
+		return output;
 	}
 }

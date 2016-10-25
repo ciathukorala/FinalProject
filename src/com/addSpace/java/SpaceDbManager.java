@@ -40,7 +40,7 @@ public class SpaceDbManager {
 		}
 
 		if(set2.getName()!=null){
-		String sql = "INSERT INTO addspace(Name,PhoneNumber,Address,longitude,latitude,slots,Description,Instruction,price,parkingimg) VALUES (?,?,?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO addspace(Name,PhoneNumber,Address,longitude,latitude,slots,Description,Instruction,price) VALUES (?,?,?,?,?,?,?,?,?)";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 
 		pstmt.setString(1, set2.getName());
@@ -53,10 +53,10 @@ public class SpaceDbManager {
 		pstmt.setString(8, set2.getInstruction());
 		pstmt.setString(9, set2.getPrice());
 		
-		 if (set2.getInputStream() != null) {
+		 /*if (set2.getInputStream() != null) {
              // fetches input stream of the upload file for the blob column
 			 pstmt.setBlob(10, set2.getInputStream());
-         }
+         }*/
 
          // sends the statement to the database server
       		
@@ -81,8 +81,8 @@ public class SpaceDbManager {
 				set2.setSlots(resultSet.getString(7));
 				set2.setDescription(resultSet.getString(8));
 				set2.setInstruction(resultSet.getString(9));
-				set2.setPrice(resultSet.getString(10));
-				System.out.println(resultSet.getString(2) + resultSet.getString(3) + resultSet.getString(4)+ resultSet.getString(5) + resultSet.getString(6)+ resultSet.getString(7) + resultSet.getString(8)+ resultSet.getString(9) + resultSet.getString(10)+ resultSet.getString(11));
+				//set2.setPrice(resultSet.getString(10));
+				System.out.println(resultSet.getString(2) + resultSet.getString(3) + resultSet.getString(4)+ resultSet.getString(5) + resultSet.getString(6)+ resultSet.getString(7) + resultSet.getString(8)+ resultSet.getString(9) );
 			}			
 			
 		} catch (SQLException e) {

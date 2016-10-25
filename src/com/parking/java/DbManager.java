@@ -15,7 +15,8 @@ public class DbManager {
 		// call mail send clz
 
 		if (set.getSessionValue() == null) {
-			// com.mail.password.mailPW.mail();
+			
+			com.mail.password.mailPW.mail();
 
 			String sql = "INSERT INTO register(FirstName,lastName,Email,PassWord,PhoneNumber,AdditionDetails,Role) VALUES (?,?,?,?,?,?,'User')";
 			PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -37,10 +38,10 @@ public class DbManager {
 		if (set.getSessionValue() != null) {
 			String Email = set.getSessionEmail();
 			String PW = set.getSessionPassWord();
-			System.out.println("ggggg"+Email);
-			System.out.println("ggggg"+PW);
+			System.out.println("ggggg" + Email);
+			System.out.println("ggggg" + PW);
 			Statement statement = conn.createStatement();
-			String query = "SELECT * FROM register where Email='"+Email+"'";
+			String query = "SELECT * FROM register where Email='" + Email + "'";
 			resultSet = statement.executeQuery(query);
 
 			while (resultSet.next()) {
@@ -54,5 +55,30 @@ public class DbManager {
 						+ resultSet.getString(5) + resultSet.getString(6) + resultSet.getString(7));
 			}
 		}
+	}
+
+	public String getPark() {
+
+		String output = "";
+		try {
+			Connection conn = com.connection.java.ConnectionManager.getInstance().getConnection();
+			
+			//String queryDate = "select * from booking as ro where ro.ID not in (select re.ROOMID from Reservations as re where (DATE_BEGIN >= @start and DATE_BEGIN < @end) or (DATE_END >= @start and DATE_END < @end))";
+
+			String query = "SELECT Name,longitude,latitude FROM addspace";
+			PreparedStatement pstmt = conn.prepareStatement(query);
+			ResultSet rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				output = output + (rs.getString("Name") + "," + rs.getString("latitude") + ","
+						+ rs.getString("longitude") + "|");
+			}
+
+			System.out.println("Output=" + output);
+
+		} catch (Exception e) {
+
+		}
+		return output;
 	}
 }

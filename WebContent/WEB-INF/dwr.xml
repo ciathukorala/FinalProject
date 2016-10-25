@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dwr>
+	<allow>
+
+		<create creator="new" javascript="RegServlet">
+			<param name="class" value="com.parking.java.RegServlet" />
+		</create>
+		<convert converter="bean" match="com.parking.java.GetParkList" />
+	</allow>
+</dwr>

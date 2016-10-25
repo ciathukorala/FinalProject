@@ -19,7 +19,7 @@ import javax.mail.internet.MimeMultipart;
 public class mail {
    public static void main(String[] args) {
       // Recipient's email ID needs to be mentioned.
-      String to = "sendanayaka1992@gmail.com";
+      String to = "ishaniua@gmail.com";
 
       // Sender's email ID needs to be mentioned
       String from = "isharaathukorala@gmail.com";

@@ -69,7 +69,7 @@ public class SpaceServlet extends HttpServlet {
 		 InputStream inputStream = null; // input stream of the upload file
          
 	        // obtains the upload file part in this multipart request
-	        Part filePart = request.getPart("ParkImage");
+	  /*      Part filePart = request.getPart("ParkImage");
 	        if (filePart != null) {
 	            // prints out some information for debugging
 	            System.out.println(filePart.getName());
@@ -78,7 +78,7 @@ public class SpaceServlet extends HttpServlet {
 	             
 	            // obtains input stream of the upload file
 	            inputStream = filePart.getInputStream();
-	        }	        
+	        }*/	        
 
 		String Name = request.getParameter("Name");
 		String PhoneNumber = request.getParameter("PhoneNumber");
@@ -101,7 +101,7 @@ public class SpaceServlet extends HttpServlet {
 		initialVariable2.setDescription(Description);
 		initialVariable2.setInstruction(Instruction);
 		initialVariable2.setPrice(price);
-		initialVariable2.setInputStream(inputStream);
+		//initialVariable2.setInputStream(inputStream);
 		//initialVariable2.setItemName(itemName);
 
 		try {

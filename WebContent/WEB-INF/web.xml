@@ -10,6 +10,22 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>payment.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <servlet-name>dwr-invoker</servlet-name>
+    <servlet-class>org.directwebremoting.servlet.DwrServlet</servlet-class>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+      <param-name>crossDomainSessionSecurity</param-name>
+      <param-value>false</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>dwr-invoker</servlet-name>
+    <url-pattern>/dwr/*</url-pattern>
+  </servlet-mapping>
   <context-param>
     <param-name>authtoken</param-name>
     <param-value>cDwXnw3dN7eI-eU0fS0vuMkotJFsnINoEuFJ2a5GVzsrS9yorqcxGieGcnS</param-value>

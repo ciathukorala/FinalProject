@@ -29,5 +29,8 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="org.apache.commons.io.jar"/>
 	<classpathentry kind="lib" path="paypal_stubs.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/dwr.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -8,6 +8,11 @@
 <link href="../css/style.css" rel='stylesheet' type='text/css' />
 <link rel="stylesheet" href="../css/jquery-ui.css" />
 
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <title>Easy Parking Sign</title>
 </head>
 <body>
@@ -103,88 +108,66 @@
 			<div class="clear"></div>
 		</div>
 		<!---//End-header---->
-		<!-- Body part -->
-		<div class="contact">
 
-			<div class="contact-info">
-				<div class="map">
-
+<!--Body  -->
+<center>
+<div class="container-fluid">  
+  <div class="row" style="background-color:white;">
+    <div class="col-sm-5 col-md-6" style="background-color:white;"><div class="map">
 					<iframe width="100%" height="350" frameborder="0" scrolling="no"
 						marginheight="0" marginwidth="0"
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.4506977503897!2d80.78713681419394!3d6.714724022775061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2f659ec48e10a52c!2sSabaragamuwa+University!5e0!3m2!1sen!2slk!4v1468055518294"></iframe>
-				</div>
-				<div class="wrap">
-					<div class="contact-grids">
-						<div class="col_1_of_bottom span_1_of_first1">
-							<h5>Address</h5>
-							<ul class="list3">
-								<li><img src="../images/home.png" alt="">
-									<div class="extra-wrap">
-										<p>
-											Sabaragamuwa University,<br>Belihuloya
-										</p>
-									</div></li>
-							</ul>
-						</div>
-						<div class="col_1_of_bottom span_1_of_first1">
-							<h5>Phones</h5>
-							<ul class="list3">
-								<li><img src="../images/phone.png" alt="">
-									<div class="extra-wrap">
-										<p>
-											<span>Telephone:</span>+94 71 3879092
-										</p>
-									</div> <img src="../images/fax.png" alt="">
-									<div class="extra-wrap">
-										<p>
-											<span>FAX:</span>+94 33 2226214
-										</p>
-									</div></li>
-							</ul>
-						</div>
-						<div class="col_1_of_bottom span_1_of_first1">
-							<h5>Email</h5>
-							<ul class="list3">
-								<li><img src="../images/email.png" alt="">
-									<div class="extra-wrap">
-										<p>
-											<span class="mail"><a
-												href="isharaathukorala@gmail.com">EasyParking@gmail.com</a></span>
-										</p>
-									</div></li>
-							</ul>
-						</div>
-						<div class="clear"></div>
-					</div>
-					<form method="post" action="../ContactServlet">
-						<div class="contact-form">
-							<div class="contact-to">
-								<input type="text" class="text" name="Name" value="Name..."
-									onfocus="this.value = '';"
-									onblur="if (this.value == '') {this.value = 'Name...';}">
-								<input type="text" class="text" name="Email" value="Email..."
-									onfocus="this.value = '';"
-									onblur="if (this.value == '') {this.value = 'Email...';}">
-								<input type="text" class="text" name="Subject"
-									value="Subject..." onfocus="this.value = '';"
-									onblur="if (this.value == '') {this.value = 'Subject...';}">
-							</div>
-							<div class="text2">
-								<textarea value="Message:" name="Message"
-									onfocus="this.value = '';"
-									onblur="if (this.value == '') {this.value = 'Message';}">Message..</textarea>
-							</div>
-							<span><input type="submit" class="" value="Submit"></span>
-							<div class="clear"></div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
+				</div></div>
+    <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0" style="background-color:white;">
+	<div class="w3-container">
 
+  <div class="w3-card-4" style="width:60%">
+    <header class="w3-container w3-light-grey">
+      <h3>Car Park Solution</h3>
+    </header>
+   <form class="form-inline"><br>
+  <div class="form-group">
+  <div class="col-sm-3"><label for="exampleInputName2">From</label></div>
+<div class="col-sm-9"><input type="text" class="form-control" name="begin" value="2016-10-27" readonly></div>    
+  </div><div></div>
+  <div class="form-group"><br>
+  <div class="col-sm-3">  <label for="exampleInputEmail2">Until</label></div>
+<div class="col-sm-9"><input type="email" class="form-control" name="end" value="2016-10-27" readonly></div>   
+</div>
+<div class="form-group"><br>
+  <div class="col-sm-3">  <label>TOTAL</label></div>
+  <div class="col-sm-9"><input type="Text" class="form-control" value="250" readonly></div>   
+</div>
 
-		<!-- End Body -->
+<div></div>  
+</form><br>
+    <button class="w3-btn-block w3-dark-grey">Book Now with PayPal</button>
+  </div>
+</div>
+<div></div><br><br>
+<div>
+<form action="${initParam['posturl']}" method="POST">
+		<input type="hidden" name="upload" value="1">
+		<input type="hidden" name="return" value="${initParam['returnurl']}">
+		<input type="hidden" name="cmd" value="_cart">
+		<input type="hidden" name="tx" value=68E78904HY5824419>
+		<input type="hidden" name="business" value="${initParam['business']}">
+		
+		<input type="hidden" name="item_name_1" value="Amount">
+		<input type="hidden" name="amount_1" value="10">
+		
+		<input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_200x51.png" alt="PayPal Logo">
 
+	</form>
+</div>
+
+</div>
+</div>
+</div>
+</center>
+
+<br><br><br><br>
+<!--Body End-->
 		<!----start-footer---->
 		<div class="footer">
 			<div class="wrap">

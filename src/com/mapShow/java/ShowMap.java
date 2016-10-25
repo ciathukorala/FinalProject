@@ -33,6 +33,11 @@ public class ShowMap extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		System.out.println("hiiiiiii servlet");
+		
+		String Name = request.getParameter("title");
+		System.out.println(Name);
 	}
 
 	/**
@@ -42,33 +47,8 @@ public class ShowMap extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 		
-		String searchPlace = request.getParameter("searchPlace");
-		String start_date = request.getParameter("start_date");
-		String start_time = request.getParameter("start_time");
-		String end_date = request.getParameter("end_date");
-		String end_time = request.getParameter("end_time");
-		
-		System.out.print(searchPlace);
-		System.out.print(start_date);
-		System.out.print(start_time);
-		System.out.print(end_date);
-		System.out.print(end_time);
-		
-		mapGetSet mapinitial = new mapGetSet();
-		
-		mapinitial.setSearchPlace(searchPlace);
-		mapinitial.setStart_date(start_date);
-		mapinitial.setStart_time(start_time);
-		mapinitial.setEnd_date(end_date);
-		mapinitial.setEnd_time(end_time);
-				
-		try {
-			mapDbManager.Insert(mapinitial);
-		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		System.out.println("hibyrrr servlet");
 		
 	}
-
+	
 }

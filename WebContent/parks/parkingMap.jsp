@@ -4,9 +4,29 @@
 <html>
 <head>
 <script
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAG2cS6fDAseCo-RQ2s-zVF1leOkbad-pc&callback=initialize"
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAG2cS6fDAseCo-RQ2s-zVF1leOkbad-pc"
 	async defer></script>
+<!--   <script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAG2cS6fDAseCo-RQ2s-zVF1leOkbad-pc&callback=getParkList"
+	async defer></script> -->
+
+
 <script type="text/javascript" src="../js/park.js"></script>
+
+ <script type='text/javascript' src='/ParkingSystem/dwr/engine.js'></script>
+ <script type='text/javascript' src='/ParkingSystem/dwr/interface/RegServlet.js'></script>
+ <script type='text/javascript' src='/ParkingSystem/dwr/util.js'></script>
+ 
+  
+  <script>
+  function loadMap(){
+	  
+	  alert("in loadMap");
+	  
+	  getParkList();
+  }
+  
+  </script>
 <style>
 #sidebar {
 	height: auto;
@@ -33,12 +53,11 @@
 <link id="style_responsive" rel="stylesheet" type="text/css" media="all"
 	href="../media/compressed/css/responsive.minfda6.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Parking Map</title>
 </head>
-<body>
-
+<body onload=initializeMap() >
 	<!-- NavBar -->
-	<form action="../ShowMap" method="post">
+	
 		<div class="o-section o-section--park o-section--short c-srp-header">
 			<div class="c-srp-header__container">
 				<div class="c-srp-header__item">
@@ -175,7 +194,7 @@
 							</select>
 						</div>
 						<div class="o-field c-srp-form__search-field">
-							<button type="submit"
+							<button  onclick=addMarkertest()
 								class="o-field__input c-srp-form__submit-search">
 								<span>Search</span>
 							</button>
@@ -184,7 +203,11 @@
 				</div>
 			</div>
 		</div>
-	</form>
+	
+
+<input type="button" onclick=addMarkertest() />
+
+<input id="data" type="hidden" value="" />
 
 	<div style="display: flex; height: 89%;">
 		<div id="sidebar" class="c-srp-listing__list">
