@@ -16,17 +16,7 @@
  <script type='text/javascript' src='/ParkingSystem/dwr/engine.js'></script>
  <script type='text/javascript' src='/ParkingSystem/dwr/interface/RegServlet.js'></script>
  <script type='text/javascript' src='/ParkingSystem/dwr/util.js'></script>
- 
-  
-  <script>
-  function loadMap(){
-	  
-	  alert("in loadMap");
-	  
-	  getParkList();
-  }
-  
-  </script>
+
 <style>
 #sidebar {
 	height: auto;
@@ -70,14 +60,14 @@
 						<div
 							class="o-field c-srp-form__grow-field c-srp-form__location-field">
 							<input class="o-field__input o-field__input--text"
-								placeholder="Enter a location" name="searchPlace" type="text" />
+								placeholder="Enter a location" name="searchPlace" type="text" id="searchPlace" />
 						</div>
 						<div class="o-field c-srp-form__date-field">
-							<input name="start_date" type="date"
+							<input name="start_date" type="date" id="start_date"
 								class="datepicker o-field__input c-srp-form__date-input" />
 						</div>
 						<div class="o-field c-srp-form__time-field">
-							<select class="timepicker o-field__input c-srp-form__time-input"
+							<select class="timepicker o-field__input c-srp-form__time-input" id="start_time"
 								name="start_time"><option value="">Time</option>
 								<option value="00:00:00">12:00am</option>
 								<option value="00:30:00">12:30am</option>
@@ -136,11 +126,11 @@
 								&rarr;</div>
 						</div>
 						<div class="o-field c-srp-form__date-field">
-							<input name="end_date" type="date"
+							<input name="end_date" type="date" id="end_date" 
 								class="datepicker o-field__input c-srp-form__date-input" />
 						</div>
 						<div class="o-field c-srp-form__time-field">
-							<select class="timepicker o-field__input c-srp-form__time-input"
+							<select class="timepicker o-field__input c-srp-form__time-input" id="end_time"
 								name="end_time"><option value="">Time</option>
 								<option value="00:00:00">12:00am</option>
 								<option value="00:30:00">12:30am</option>
@@ -194,7 +184,7 @@
 							</select>
 						</div>
 						<div class="o-field c-srp-form__search-field">
-							<button  onclick=addMarkertest()
+							<button  onclick=addMarkertest(end_date.value)
 								class="o-field__input c-srp-form__submit-search">
 								<span>Search</span>
 							</button>
@@ -205,7 +195,6 @@
 		</div>
 	
 
-<input type="button" onclick=addMarkertest() />
 
 <input id="data" type="hidden" value="" />
 

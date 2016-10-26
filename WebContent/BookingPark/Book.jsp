@@ -15,25 +15,27 @@
       <header class="w3-container w3-teal">
         <span onclick="document.getElementById('id01').style.display='none'"
         class="w3-closebtn">&times;</span>
-        <h2>Modal Header Company park name</h2>
+        <h2><%=request.getAttribute("Name")%></h2>
       </header>
       <div class="w3-container">
 	  <div class="row">
-    <div class="col-sm-5" style="background-color:lavender;"> <p>This car park is open 24/7 and manned. The...</p>
-        <p><b>Facilities:</b></p>
-		<p>CCTV, Onsite staff, Covered parking, </p>
-		<p>Covered parking, Multiple entry/exit</p></div>
-    <div class="col-sm-6" style="background-color:lavender;"><img src="C:\\Users\\Ishara\\Desktop\\download(1).jpg" class="img-circle" alt="Cinque Terre" width="150" height="50"></div>
-  </div>
-       
-      </div>
-      <footer class="w3-container w3-teal">
-	  <p>
-        <div class="btn-group btn-group-justified">
- 
-  <button type="button" class="btn btn-primary btn-lg"" ><a href="../BookingPark/payPal.jsp" >Book This Space</a></button>
-  <br>
+    <div class="col-sm-7" style="background-color:lavender;"> <p>This car park is open 24h for you.......</p>
+        <p><b>Contact Number:</b><%=request.getAttribute("PhoneNumber")%></p>
+		<p><b>Address:</b><%=request.getAttribute("Address")%></p>
+		<p><b>Description:</b><%=request.getAttribute("Description")%></p>
+		<p><b>Instruction:</b><%=request.getAttribute("Instruction")%></p>
+		<p><b>Price:</b><%=request.getAttribute("getPrice")%></p>
+   <!--  <div class="col-sm-6" style="background-color:lavender;"><img src="C://project//ParkingSystem//WebContent//DBImages//1.jpg" class="img-circle" alt="Cinque Terre" width="150" height="50"></div> -->
+  </div><br><center>
+  <button type="button" class="btn btn-warning btn-lg"" ><a href="BookingPark/payPal.jsp" >Book This Space</a></button>
+  <br><br>
   <button type="button" class="btn btn-warning btn-lg">More Information</button>
+  </center>
+      </div>
+    
+	
+ 
+
  
 </div>
 </p>

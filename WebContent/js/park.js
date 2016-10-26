@@ -17,15 +17,20 @@ function initializeMap() {
 }
 
 function addMarkertest() {
-	alert("hello");
-	RegServlet.getParkList(gotParkList);
+	
+	 var searchPlace = document.getElementById('searchPlace').value;
+	 var start_date = document.getElementById('start_date').value;
+	 var start_time = document.getElementById('start_time').value;
+	 var end_date = document.getElementById('end_date').value;
+	 var end_time = document.getElementById('end_time').value;
+
+	RegServlet.getParkList(searchPlace,start_date,start_time,end_date,end_time,gotParkList);
+	
 }
 
 function gotParkList(receivedData) {
-	alert("Hi");
-	var raw = receivedData.split("|");
 
-	alert(raw.length);
+	var raw = receivedData.split("|");
 
 	var iconBase = 'https://maxcdn.icons8.com/Color/PNG/24/';
 	var icons = {
@@ -40,52 +45,14 @@ function gotParkList(receivedData) {
 		}
 	};
 
-	/*function addMarker(feature) {
-		var marker = new google.maps.Marker({
-			position : feature.position,
-			icon : icons[feature.type].icon,
-			label : feature.label,
-			animation : google.maps.Animation.DROP,
-			map : map
-		});
-
-		var infowindow = new google.maps.InfoWindow({
-			content : contentString
-		});
-
-		marker.addListener('click', function() {
-			infowindow.open(map, marker);
-		});
-
-	}
-
-	var infowindow = new google.maps.InfoWindow({});
-
-	var contentString = '<div id="content">'
-			+ '<div id="siteNotice">'
-			+ '</div>'
-			+ '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'
-			+ '<div id="bodyContent">'
-			+ '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large '
-			+ 'sandstone rock formation in the southern part of the '
-			+ 'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '
-			+ 'south west of the nearest large town, Alice Springs; 450&#160;km '
-			+ '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '
-			+ 'features of the Uluru - Kata Tjuta National Park. Uluru is '
-			+ 'sacred to the Pitjantjatjara and Yankunytjatjara, the '
-			+ 'Aboriginal people of the area. It has many springs, waterholes, '
-			+ 'rock caves and ancient paintings. Uluru is listed as a World '
-			+ 'Heritage Site.</p>'
-			+ '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'
-			+ 'https://en.wikipedia.org/w/index.php?title=Uluru</a> '
-			+ '(last visited June 22, 2009).</p>' + '</div>' + '</div>';*/
+	
 
 		for (var i = 0; i <= raw.length - 1; i++) {
 
 			var lebal = raw[i].split(",");
-			alert(lebal);
+		
 			addMarker({
-				position : new google.maps.LatLng(lebal[2], lebal[1]),
+				position : new google.maps.LatLng(lebal[3], lebal[2]),
 				type : 'library',
 				label : labels[labelIndex++ % labels.length],
 				
@@ -105,13 +72,7 @@ function gotParkList(receivedData) {
 				});
 
 				marker.addListener('click', function() {
-					alert("click icon");
 					infowindow.open(map, marker);
-					document.getElementById("landmark").value = 5;
-					/*SetUserName();*/
-					alert(document.getElementById("landmark").value);
-					
-					
 				});
 
 			}
@@ -122,14 +83,14 @@ function gotParkList(receivedData) {
 			var contentString = '<div id="content">'
 					+ '<div id="siteNotice">'
 					+ '</div>'
-					+ '<h1 id="firstHeading" class="firstHeading">'+lebal[0]+'</h1>'
+					+ '<h1 id="firstHeading" class="firstHeading">'+lebal[1]+'</h1>'
 					+ '<div id="bodyContent">'
 				
-					+ 'Heritage Site.</p>'
-					+ '<p>Attribution: Uluru, <a href="../ShowMap?title='+lebal[0]+'">'
-					+ 'https://en.wikipedia.org/w/index.php?title=Uluru</a> '
-					+ '(last visited June 22, 2009).</p>' + '</div>' + '</div>';
-			
+					+ 'Booking Parking Quickly.</p>'
+					+ 'Parking Place Price -:</p>'+lebal[4]+'/='
+					+ '<p>Book Now:<a href="../ShowMap?Id='+lebal[0]+'&from=2010">'
+					+ 'Click Hear</a> '
+								
 		}
 	
 		
@@ -147,11 +108,3 @@ function gotParkList(receivedData) {
 	});
 
 }
-
-/*
-function SetUserName()
-{
-    var userName = "Shahid Bhat";
-    '<%Session["UserName"] = ' + userName + '"; %>';
-     alert('<%=Session["userName"] %>');
-}*/

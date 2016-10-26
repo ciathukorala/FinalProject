@@ -57,21 +57,24 @@ public class DbManager {
 		}
 	}
 
-	public String getPark() {
+	public String getPark(String searchPlace,String start_date,String start_time,String end_date,String end_time) {
 
+		System.out.println(searchPlace);
+		System.out.println(start_date);
+		System.out.println(start_time);
+		System.out.println(end_date);
+		System.out.println(end_time);
 		String output = "";
 		try {
 			Connection conn = com.connection.java.ConnectionManager.getInstance().getConnection();
 			
-			//String queryDate = "select * from booking as ro where ro.ID not in (select re.ROOMID from Reservations as re where (DATE_BEGIN >= @start and DATE_BEGIN < @end) or (DATE_END >= @start and DATE_END < @end))";
-
-			String query = "SELECT Name,longitude,latitude FROM addspace";
+			String query = "SELECT Id,Name,longitude,latitude,price FROM addspace";
 			PreparedStatement pstmt = conn.prepareStatement(query);
 			ResultSet rs = pstmt.executeQuery();
 
 			while (rs.next()) {
-				output = output + (rs.getString("Name") + "," + rs.getString("latitude") + ","
-						+ rs.getString("longitude") + "|");
+				output = output + (rs.getString("Id") + "," + rs.getString("Name") + "," + rs.getString("latitude") + ","
+						+ rs.getString("longitude") + "," + rs.getString("price") + "|");
 			}
 
 			System.out.println("Output=" + output);
