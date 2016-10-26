@@ -1,17 +1,16 @@
 package com.mapShow.java;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
-import com.contact.java.ContactGetSet;
 
 public class MapDBmanager {
 	public static void Insert(mapGetSet set) throws ClassNotFoundException, SQLException{
 		Connection conn = com.connection.java.ConnectionManager.getInstance().getConnection();
 		System.out.println("reg db manager");
+		
+		
 		
 		ResultSet resultSet = null;
 		try {	
@@ -34,4 +33,7 @@ public class MapDBmanager {
 		}
 				
 	}
+	
+	
+
 }

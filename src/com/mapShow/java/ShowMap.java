@@ -1,6 +1,8 @@
 package com.mapShow.java;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.io.PrintWriter;
 
@@ -14,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.contact.java.ContactDbManager;
 import com.contact.java.ContactGetSet;
 import com.loginPage.loginGetSet;
+import com.lowagie.text.DocumentException;
 import com.parking.java.DbManager;
 
 /**
@@ -43,6 +46,25 @@ public class ShowMap extends HttpServlet {
 		String Id = request.getParameter("Id");
 		System.out.println(Id);
 		
+		
+		Connection conn = com.connection.java.ConnectionManager.getInstance().getConnection();
+		System.out.println("reg db manager");
+		
+		
+		String sql = "INSERT INTO booking(Reg_Id,ParkingId,Begin,End,Price,IsCancelled) VALUES ('1','1','2016-10-23 06:20:19','2016-10-26 04:13:19','50','null')";
+		PreparedStatement pstmt;
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.executeUpdate();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+
+		
+		
+		
 		String sessionEmail = (String) request.getSession(false).getAttribute("Email");						
 		mapGetSet initialVariable = new mapGetSet();		
 		initialVariable.setEmail(sessionEmail);
@@ -56,6 +78,14 @@ public class ShowMap extends HttpServlet {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}
+		//set mail address
+		try {
+			String[] args = {};
+			com.mail.java.mail.main(initialVariable.getEmail());
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
 		}
 		
 		request.setAttribute("Name", initialVariable.getName());

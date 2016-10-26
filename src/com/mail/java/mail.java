@@ -17,9 +17,11 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
 public class mail {
-   public static void main(String[] args) {
+	public static void main(String email) {
       // Recipient's email ID needs to be mentioned.
-      String to = "ishaniua@gmail.com";
+		System.out.println("pass mail address");
+		System.out.println(email);
+      String to = email;
 
       // Sender's email ID needs to be mentioned
       String from = "isharaathukorala@gmail.com";
@@ -95,4 +97,6 @@ public class mail {
          throw new RuntimeException(e);
       }
    }
+
+
 }

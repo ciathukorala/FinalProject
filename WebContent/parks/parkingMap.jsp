@@ -3,6 +3,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<script>
+
+function getData(title)
+{
+     alert(title);
+}
+
+</script>
 <script
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAG2cS6fDAseCo-RQ2s-zVF1leOkbad-pc"
 	async defer></script>
@@ -184,7 +192,7 @@
 							</select>
 						</div>
 						<div class="o-field c-srp-form__search-field">
-							<button  onclick=addMarkertest(end_date.value)
+							<button  onclick=addMarkertest()
 								class="o-field__input c-srp-form__submit-search">
 								<span>Search</span>
 							</button>
@@ -203,9 +211,9 @@
 			<br>
 			<div class="c-srp-list-header o-wrapper o-wrapper--standard clearfix">
 				<div class="c-srp-list-header__search">
-					<select class=" o-field o-field__select o-field__select--small"
-						id="id_temp_search_order" name="temp_search_order"
-						track="click:search-results:order-by"><option
+					<select class=" o-field o-field__select o-field__select--small" onChange="getData(this.value);"
+						id="id_temp_search_order" name="temp_search_order" 
+						track="click:search-results:order-by" ><option
 							value="STANDARD">Best match</option>
 						<option value="DISTANCE">Distance (closest first)</option>
 						<option value="RATING">Rating (High to low)</option>

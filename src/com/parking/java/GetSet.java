@@ -11,7 +11,22 @@ public class GetSet {
 	private String SessionValue;
 	private String sessionEmail;
 	private String sessionPassWord;
+	private String FromDate;
+	private String EndDate;
 	
+	
+	public String getFromDate() {
+		return FromDate;
+	}
+	public void setFromDate(String fromDate) {
+		FromDate = fromDate;
+	}
+	public String getEndDate() {
+		return EndDate;
+	}
+	public void setEndDate(String endDate) {
+		EndDate = endDate;
+	}
 	public String getSessionEmail() {
 		return sessionEmail;
 	}

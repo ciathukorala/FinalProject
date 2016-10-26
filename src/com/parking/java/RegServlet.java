@@ -79,7 +79,8 @@ public class RegServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		doGet(request, response);
-
+		
+		
 		System.out.println("Hiii ela");
 		
 		String hdnParam = request.getParameter("pagename");
@@ -115,7 +116,7 @@ public class RegServlet extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+		
 	}
 	
 	public String getParkList(String searchPlace,String start_date,String start_time,String end_date,String end_time) throws SQLException{
