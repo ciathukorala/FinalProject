@@ -77,7 +77,7 @@ public class DbManager {
 
 			while (rs.next()) {
 				output = output + (rs.getString("Id") + "," + rs.getString("Name") + "," + rs.getString("latitude") + ","
-						+ rs.getString("longitude") + "," + rs.getString("price") + "|");
+						+ rs.getString("longitude") + "," + rs.getString("price") + "," + start_date + "," + end_date + "|");
 			}
 
 			System.out.println("Output=" + output);

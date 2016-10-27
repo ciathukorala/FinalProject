@@ -62,6 +62,7 @@ public class loginServlet extends HttpServlet {
 			//set session veriables
 				
 				 HttpSession session=request.getSession();
+				 session.setAttribute("UserId",initialVariable.getUserID());
 		         session.setAttribute("userName",initialVariable.getResultFirstName());
 		         session.setAttribute("userRole",initialVariable.getResultRole());
 		         session.setAttribute("Email",initialVariable.getResultEmail());

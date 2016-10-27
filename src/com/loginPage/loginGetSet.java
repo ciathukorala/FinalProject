@@ -8,7 +8,14 @@ public class loginGetSet {
 	private String resultPassWord;
 	private String resultFirstName;
 	private String resultRole;
+	private String userID;
 	
+	public String getUserID() {
+		return userID;
+	}
+	public void setUserID(String userID) {
+		this.userID = userID;
+	}
 	public String getResultFirstName() {
 		return resultFirstName;
 	}

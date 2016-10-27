@@ -7,7 +7,7 @@ var labelIndex = 0;
 function initializeMap() {
 	var latlng = new google.maps.LatLng(7.0873101, 80.0143656);
 	var options = {
-		zoom : 12,
+		zoom : 15,
 		center : latlng,
 		mapTypeId : google.maps.MapTypeId.ROADMAP
 	};
@@ -54,6 +54,8 @@ alert(title);
 	var searchPlace = document.getElementById('searchPlace').value;
 	var start_date = document.getElementById('start_date').value;
 	var end_date = document.getElementById('end_date').value;
+	
+	//string newDate = moment(currentDate, currentFormatString).format(newFormatString);
 
 	alert(start_date);
 	alert(end_date);
@@ -112,6 +114,8 @@ function gotParkList(receivedData) {
 
 		}
 
+	
+		
 		var infowindow = new google.maps.InfoWindow({});
 
 		var contentString = '<div id="content">' + '<div id="siteNotice">'
@@ -119,8 +123,8 @@ function gotParkList(receivedData) {
 				+ lebal[1] + '</h1>' + '<div id="bodyContent">'
 
 				+ 'Booking Parking Quickly.</p>' + 'Parking Place Price -:</p>'
-				+ lebal[4] + '/=' + '<p>Book Now:<a href="../ShowMap?Id='
-				+ lebal[0] + '">' + 'Click Hear</a> '
+				+ lebal[4] + '/=' + '<p>Book Now:<a href="../ShowMap?Id='+ lebal[0] +'&Sdate='+lebal[5]+'&Edate='+lebal[6]+'&Price='+lebal[4]+'">' 
+				+ 'Click Hear</a> '
 
 	}
 
