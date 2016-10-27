@@ -8,6 +8,19 @@
 <link href="../css/style.css" rel='stylesheet' type='text/css' />
 <link id="style_core" rel="stylesheet" type="text/css" media="all"
 	href="../media/compressed/css/core.minfda6.css?v=2.0.42" />
+	
+	<script>
+function validateForm() {
+    var x = document.forms["myForm"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
+}
+</script>
+
 </head>
 <body>
 
@@ -92,7 +105,7 @@
 					Register <span>for an account</span><i class="icon-lock"></i>
 				</div>
 
-				<form name="registation" action="../RegServlet" method="post"
+				<form name="myForm" action="../RegServlet" method="post" onsubmit="return validateForm();"
 					class="form-horizontal">
 					<input type="hidden" name="pagename" value="register ">
 					<div class="modal-body">
@@ -125,7 +138,7 @@
 								<div class="controls">
 									<input type="text" value=""
 										class="input-smedium phorm_field_name"
-										placeholder="First name" name="FirstName" /> <input
+										placeholder="First name" name="FirstName" required/> <input
 										type="text" value="" class="input-smedium phorm_field_name"
 										placeholder="Last name" name="LastName" />
 								</div>
@@ -135,18 +148,10 @@
 								<label for="id_email" class="sr-only control-label">Email
 									address</label>
 								<div class="controls">
-									<input type="email" value=""
-										class="phorm_field_email has-tooltip" name="Email" required />
+									<input type="Email" value=""
+										class="phorm_field_email has-tooltip"  name="email" required />
 								</div>
 							</div>
-
-							<!-- <div class="form-group control-group required">
-   <label for="id_password" class="sr-only control-label">Password</label>
-   <div class="controls">
-        <input type="password" value="" minlength="6" class="phorm_field_password" name="PassWord" required/>
-        <p class="help-block">Please choose a secure password (min. 6 characters)</p>
-   </div>
-</div> -->
 
 							<div class="form-group control-group required">
 								<label class="sr-only control-label">Phone Number</label>

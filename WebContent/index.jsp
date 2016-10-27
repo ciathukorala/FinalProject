@@ -159,11 +159,7 @@
 					<!-- /Slide image -->
 					<!-- Texts container -->
 					<div class="slide_content">
-						<div class="slide_content_wrap">
-							<!-- Text title -->
-							<!-- <h4 class="title">Visit to the Pearl of the Indian Ocean</h4>-->
-							<!-- /Text title -->
-							<!-- Text description -->
+						<div class="slide_content_wrap">						
 							<p class="description"></p>
 							<!-- /Text description -->
 							<div class="slide-btns description">
@@ -173,8 +169,7 @@
 							</div>
 						</div>
 					</div>
-					<!-- /Texts container -->
-
+					
 				</div>
 				<!-- /Duplicate to create more slides -->
 				<div class="slide">
@@ -187,12 +182,7 @@
 							<!-- Text description -->
 							<p class="description"></p>
 							<!-- /Text description -->
-							<div class="slide-btns description">
-								<ul>
-									<li><a class="mapbtn" href="#">Show on the map </a></li>
-									<li><a class="minfo" href="#">More info </a></li>
-									<div class="clear"></div>
-								</ul>
+							<div class="slide-btns description">								
 							</div>
 						</div>
 					</div>
@@ -210,11 +200,7 @@
 							<p class="description"></p>
 							<!-- /Text description -->
 							<div class="slide-btns description">
-								<ul>
-									<li><a class="mapbtn" href="#">Show on the map </a></li>
-									<li><a class="minfo" href="#">More info </a></li>
-									<div class="clear"></div>
-								</ul>
+								
 							</div>
 						</div>
 					</div>
@@ -226,18 +212,11 @@
 					<img src="images/pp72.jpg" sizes="1600x700" alt="" />
 					<div class="slide_content">
 						<div class="slide_content_wrap">
-							<!-- Text title -->
-
-							<!-- /Text title -->
-							<!-- Text description -->
+							
 							<p class="description"></p>
 							<!-- /Text description -->
 							<div class="slide-btns description">
-								<ul>
-									<li><a class="mapbtn" href="#">Show on the map </a></li>
-									<li><a class="minfo" href="#">More info </a></li>
-									<div class="clear"></div>
-								</ul>
+								
 							</div>
 						</div>
 					</div>
@@ -281,7 +260,7 @@
 				<h4>Book</h4>
 				<p></p>
 				<p></p>
-				<p>Just pick the parking space that suits you best and pay
+				<p>Easy Park the parking space that suits you best and pay
 					online to guarantee it's yours.</p>
 				<div class="icon">
 					<img src="media/img/home/justpark/icon-calendar.png"

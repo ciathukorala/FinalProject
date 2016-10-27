@@ -7,7 +7,7 @@ var labelIndex = 0;
 function initializeMap() {
 	var latlng = new google.maps.LatLng(7.0873101, 80.0143656);
 	var options = {
-		zoom : 15,
+		zoom : 12,
 		center : latlng,
 		mapTypeId : google.maps.MapTypeId.ROADMAP
 	};
@@ -49,17 +49,20 @@ function geocodeAddress(geocoder, resultsMap) {
 	});
 }
 
-function addMarkertest() {
-
+function addMarkertest(title) {
+alert(title);
 	var searchPlace = document.getElementById('searchPlace').value;
 	var start_date = document.getElementById('start_date').value;
-	var start_time = document.getElementById('start_time').value;
 	var end_date = document.getElementById('end_date').value;
-	var end_time = document.getElementById('end_time').value;
 
-	RegServlet.getParkList(searchPlace, start_date, start_time, end_date,
-			end_time, gotParkList);
-
+	alert(start_date);
+	alert(end_date);
+	if((start_date && end_date &&searchPlace)!='' ){
+		alert("come");
+	RegServlet.getParkList(searchPlace, start_date,end_date,title, gotParkList );
+	}else{
+		alert("Please Enter Start&End Date and Time");
+	}
 }
 
 function gotParkList(receivedData) {
@@ -121,9 +124,5 @@ function gotParkList(receivedData) {
 
 	}
 
-	/*
-	 * var circle = new google.maps.Circle({ center : { lat : 7.0873121, lng :
-	 * 80.0143156 }, map : map, radius : 1000, // IN METERS. fillColor :
-	 * '#FF6600', fillOpacity : 0.3, strokeColor : "#FFF", strokeWeight : 0 });
-	 */
+	
 }

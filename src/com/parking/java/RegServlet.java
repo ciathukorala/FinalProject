@@ -119,12 +119,13 @@ public class RegServlet extends HttpServlet {
 		
 	}
 	
-	public String getParkList(String searchPlace,String start_date,String start_time,String end_date,String end_time) throws SQLException{
+	public String getParkList(String searchPlace,String start_date,String end_date,String title) throws SQLException{
 System.out.println("IN JAVA");
 
+System.out.println(title);
 		DbManager dbMngr = new DbManager();
 		
-		String output = dbMngr.getPark(searchPlace,start_date,start_time,end_date,end_time);
+		String output = dbMngr.getPark(searchPlace,start_date,end_date);
 		
 		return output;
 	}

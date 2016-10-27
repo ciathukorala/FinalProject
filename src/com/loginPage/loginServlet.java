@@ -74,7 +74,7 @@ public class loginServlet extends HttpServlet {
 			String nextJSP = "/index.jsp";
 			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
 			dispatcher.forward(request,response);}else{
-				String nextJSP = "/login/SignPage.jsp";
+				String nextJSP = "/SignPage.jsp";
 				RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
 				dispatcher.forward(request,response);
 			}
