@@ -57,7 +57,7 @@ public class DbManager {
 		}
 	}
 
-	public String getPark(String searchPlace,String start_date,String end_date) {
+	public String getPark(String searchPlace,String start_date,String end_date ,String title) {
 		Connection conn = com.connection.java.ConnectionManager.getInstance().getConnection();
 
 		System.out.println(searchPlace);
@@ -77,7 +77,7 @@ public class DbManager {
 
 			while (rs.next()) {
 				output = output + (rs.getString("Id") + "," + rs.getString("Name") + "," + rs.getString("latitude") + ","
-						+ rs.getString("longitude") + "," + rs.getString("price") + "," + start_date + "," + end_date + "|");
+						+ rs.getString("longitude") + "," + rs.getString("price") + "," + start_date + "," + end_date + "," + title + "|");
 			}
 
 			System.out.println("Output=" + output);

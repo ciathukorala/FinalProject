@@ -125,7 +125,7 @@ System.out.println("IN JAVA");
 System.out.println(title);
 		DbManager dbMngr = new DbManager();
 		
-		String output = dbMngr.getPark(searchPlace,start_date,end_date);
+		String output = dbMngr.getPark(searchPlace,start_date,end_date,title);
 		
 		return output;
 	}

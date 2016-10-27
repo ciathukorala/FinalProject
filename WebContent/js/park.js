@@ -50,19 +50,22 @@ function geocodeAddress(geocoder, resultsMap) {
 }
 
 function addMarkertest(title) {
-alert(title);
+
+	var title = title;
 	var searchPlace = document.getElementById('searchPlace').value;
 	var start_date = document.getElementById('start_date').value;
 	var end_date = document.getElementById('end_date').value;
-	
-	//string newDate = moment(currentDate, currentFormatString).format(newFormatString);
+
+	// string newDate = moment(currentDate,
+	// currentFormatString).format(newFormatString);
 
 	alert(start_date);
 	alert(end_date);
-	if((start_date && end_date &&searchPlace)!='' ){
+	if ((start_date && end_date && searchPlace) != '') {
 		alert("come");
-	RegServlet.getParkList(searchPlace, start_date,end_date,title, gotParkList );
-	}else{
+		RegServlet.getParkList(searchPlace, start_date, end_date, title,
+				gotParkList);
+	} else {
 		alert("Please Enter Start&End Date and Time");
 	}
 }
@@ -88,12 +91,20 @@ function gotParkList(receivedData) {
 
 		var lebal = raw[i].split(",");
 
-		addMarker({
-			position : new google.maps.LatLng(lebal[3], lebal[2]),
-			type : 'library',
-			label : labels[labelIndex++ % labels.length],
+		if (lebal[7] == 'RATING') {
+			addMarker({
+				position : new google.maps.LatLng(lebal[3], lebal[2]),
+				type : 'library',
+				label : labels[labelIndex++ % labels.length]
 
-		});
+			});
+		} else {
+			addMarker({
+				position : new google.maps.LatLng(lebal[3], lebal[2]),
+				type : 'library',
+			});
+
+		}
 
 		function addMarker(feature) {
 			var marker = new google.maps.Marker({
@@ -114,8 +125,6 @@ function gotParkList(receivedData) {
 
 		}
 
-	
-		
 		var infowindow = new google.maps.InfoWindow({});
 
 		var contentString = '<div id="content">' + '<div id="siteNotice">'
@@ -123,10 +132,10 @@ function gotParkList(receivedData) {
 				+ lebal[1] + '</h1>' + '<div id="bodyContent">'
 
 				+ 'Booking Parking Quickly.</p>' + 'Parking Place Price -:</p>'
-				+ lebal[4] + '/=' + '<p>Book Now:<a href="../ShowMap?Id='+ lebal[0] +'&Sdate='+lebal[5]+'&Edate='+lebal[6]+'&Price='+lebal[4]+'">' 
-				+ 'Click Hear</a> '
+				+ lebal[4] + '/=' + '<p>Book Now:<a href="../ShowMap?Id='
+				+ lebal[0] + '&Sdate=' + lebal[5] + '&Edate=' + lebal[6]
+				+ '&Price=' + lebal[4] + '">' + 'Click Hear</a> '
 
 	}
 
-	
 }
