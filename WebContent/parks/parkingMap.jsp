@@ -4,12 +4,10 @@
 <html>
 <head>
 <script>
-
 function getData(title)
 {
      alert(title);
 }
-
 </script>
 <script
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAG2cS6fDAseCo-RQ2s-zVF1leOkbad-pc"
@@ -33,14 +31,12 @@ function getData(title)
 	background: red;
 	float: left;
 }
-
 #map {
 	height: auto;
 	width: 75%;
 	position: relative;
 	float: left;
 }
-
 .form {
 	margin: 0 auto;
 	float: none;
@@ -192,7 +188,7 @@ function getData(title)
 							</select>
 						</div>
 						<div class="o-field c-srp-form__search-field">
-							<button  onclick=addMarkertest()
+							<button  onclick=addMarkertest() id="submit"
 								class="o-field__input c-srp-form__submit-search">
 								<span>Search</span>
 							</button>

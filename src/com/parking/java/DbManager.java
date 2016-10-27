@@ -69,6 +69,8 @@ public class DbManager {
 			Connection conn = com.connection.java.ConnectionManager.getInstance().getConnection();
 			
 			String query = "SELECT Id,Name,longitude,latitude,price FROM addspace";
+			
+			//String query = "select * from addspace a where a.Id not in (select ParkingID from booking b where (Begin>='2016-10-23 06:20:19' AND Begin<'2016-10-26 04:13:19') OR (End>='2016-10-23 06:20:19' AND End<'2016-10-26 04:13:19') )";
 			PreparedStatement pstmt = conn.prepareStatement(query);
 			ResultSet rs = pstmt.executeQuery();
 
