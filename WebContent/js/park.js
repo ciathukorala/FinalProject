@@ -7,7 +7,7 @@ var labelIndex = 0;
 function initializeMap() {
 	var latlng = new google.maps.LatLng(7.0873101, 80.0143656);
 	var options = {
-		zoom : 15,
+		zoom : 13,
 		center : latlng,
 		mapTypeId : google.maps.MapTypeId.ROADMAP
 	};
@@ -30,12 +30,12 @@ function geocodeAddress(geocoder, resultsMap) {
 		if (status === 'OK') {
 
 			var val = results[0].geometry.location;
-			alert(val);
+			/*alert(val);*/
 
 			var circle = new google.maps.Circle({
 				center : val,
 				map : map,
-				radius : 1000, // IN METERS.
+				radius : 2000, // IN METERS.
 				fillColor : '#FF6600',
 				fillOpacity : 0.3,
 				strokeColor : "#FFF",
@@ -59,14 +59,16 @@ function addMarkertest(title) {
 	// string newDate = moment(currentDate,
 	// currentFormatString).format(newFormatString);
 
-	alert(start_date);
-	alert(end_date);
-	if ((start_date && end_date && searchPlace) != '') {
-		alert("come");
+	/*alert(start_date);
+	alert(end_date);*/
+	
+	
+	if ((start_date && end_date && searchPlace && start_date<= end_date) != '') {
+		/*alert("come");*/
 		RegServlet.getParkList(searchPlace, start_date, end_date, title,
 				gotParkList);
 	} else {
-		alert("Please Enter Start&End Date and Time");
+		alert("Please Enter Start&End Date and Time Or Start date>End date");
 	}
 }
 

@@ -130,7 +130,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td>No of Parking Slots -:<input type="text" name="slots"
+							<td>No of Parking Slots -:<input type="number" name="slots"
 								placeholder="No.OF Slots" required />
 							</td>
 						</tr>
@@ -146,7 +146,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td>Price of one Slots -:<input type="text" name="price"
+							<td>Price of one Slots -:<input type="number" name="price" 
 								placeholder="Rate of One Slots" required />
 							</td>
 						</tr>

@@ -199,7 +199,7 @@
 			</div>
 		</div>
 
-		<div
+	<!-- 	<div
 			class="o-section o-section--center o-section--alpha o-section--medium">
 			<div class="o-wrapper">
 				<div class="o-grid o-grid--center">
@@ -210,7 +210,7 @@
 				</div>
 			</div>
 			<a href="#" class="o-btn o-btn--wide">Add your space now</a>
-		</div>
+		</div> -->
 		</main>
 
 

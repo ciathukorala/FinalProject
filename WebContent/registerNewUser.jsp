@@ -147,7 +147,7 @@
 							<div class="form-group control-group required">
 								<label class="sr-only control-label">Phone Number</label>
 								<div class="controls">
-									<input type="text"
+									<input type="text" pattern="[0-9]{10}"
 										value="<%=request.getAttribute("PhoneNumber")%>"
 										class="phorm_field_password" name="PhoneNumber" />
 								</div>

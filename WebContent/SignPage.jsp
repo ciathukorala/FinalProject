@@ -86,7 +86,7 @@
 
 
 		<tr>
-			name="<%=request.getAttribute("Email")%>"
+			<%-- name="<%=request.getAttribute("Email")%>" --%>
 		</tr>
 		<div id="login-form">
 			<form name="login" action="loginServlet" method="post"

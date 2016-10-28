@@ -31,14 +31,14 @@ public class barcode {
 	public static void main(String[] args) throws Exception {
 		String name = "ishara";
 		String Vnumber = "GQ-2213";
-		String SDate="2016-07-12";
-		String EDate="2016-07-12";
+		String SDate="2016-10-30";
+		String EDate="2016-10-31";
 		String Amount = "5000";
 		String Address="68/28,Isurumawatha,Yakkala";
 		String number= "071-3879092";
-		String img1 ="C:\\project\\ParkingSystem\\WebContent\\images\\park.jpg";
-		String img2 ="C:\\project\\ParkingSystem\\WebContent\\images\\park.jpg";
-		String img3 ="C:\\project\\ParkingSystem\\WebContent\\images\\park.jpg";
+		String img1 ="C:\\project\\ParkingSystem\\WebContent\\images\\1.jpg";
+		String img2 ="C:\\project\\ParkingSystem\\WebContent\\images\\2.jpg";
+		String img3 ="C:\\project\\ParkingSystem\\WebContent\\images\\3.jpg";
 		
 		Document document = new Document();
 		PdfWriter writer = PdfWriter.getInstance(document,

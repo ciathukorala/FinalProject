@@ -8,8 +8,8 @@
 <link href="../css/style.css" rel='stylesheet' type='text/css' />
 <link id="style_core" rel="stylesheet" type="text/css" media="all"
 	href="../media/compressed/css/core.minfda6.css?v=2.0.42" />
-	
-	<script>
+
+<!-- <script>
 function validateForm() {
     var x = document.forms["myForm"]["email"].value;
     var atpos = x.indexOf("@");
@@ -19,7 +19,7 @@ function validateForm() {
         return false;
     }
 }
-</script>
+</script> -->
 
 </head>
 <body>
@@ -105,7 +105,7 @@ function validateForm() {
 					Register <span>for an account</span><i class="icon-lock"></i>
 				</div>
 
-				<form name="myForm" action="../RegServlet" method="post" onsubmit="return validateForm();"
+				<form name="registation" action="../RegServlet" method="post"
 					class="form-horizontal">
 					<input type="hidden" name="pagename" value="register ">
 					<div class="modal-body">
@@ -138,7 +138,7 @@ function validateForm() {
 								<div class="controls">
 									<input type="text" value=""
 										class="input-smedium phorm_field_name"
-										placeholder="First name" name="FirstName" required/> <input
+										placeholder="First name" name="FirstName" required /> <input
 										type="text" value="" class="input-smedium phorm_field_name"
 										placeholder="Last name" name="LastName" />
 								</div>
@@ -148,16 +148,18 @@ function validateForm() {
 								<label for="id_email" class="sr-only control-label">Email
 									address</label>
 								<div class="controls">
-									<input type="Email" value=""
-										class="phorm_field_email has-tooltip"  name="email" required />
+								<input type="email" value=""
+ -										class="phorm_field_email has-tooltip" name="Email" required />
+									<!-- <input type="Email" value=""
+										class="phorm_field_email has-tooltip" name="email" required /> -->
 								</div>
 							</div>
 
 							<div class="form-group control-group required">
 								<label class="sr-only control-label">Phone Number</label>
 								<div class="controls">
-									<input type="text" value="" class="phorm_field_password"
-										name="PhoneNumber" />
+									<input type="text" value="" pattern="[0-9]{10}"
+										class="phorm_field_password" name="PhoneNumber" />
 								</div>
 							</div>
 
@@ -177,13 +179,12 @@ function validateForm() {
 									<label for="id_receives_email_newsletter"><input
 										value="on" class="phorm_field_checkbox"
 										id="id_receives_email_newsletter"
-										name="receives_email_newsletter" type="checkbox" /> Receive
-										our email newsletter with advice and updates about our service
-									</label>
+										name="receives_email_newsletter" type="hidden" /> Receive
+										password your email and log on System. </label>
 
-									<p class="help-block">General information about exciting
+									<!-- 		<p class="help-block">General information about exciting
 										and important updates to the website as well as advice on how
-										to make the most of our service</p>
+										to make the most of our service</p> -->
 								</div>
 							</div>
 

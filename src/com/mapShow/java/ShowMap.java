@@ -90,14 +90,7 @@ public class ShowMap extends HttpServlet {
 		} catch (SQLException e2) {
 			// TODO Auto-generated catch block
 			e2.printStackTrace();
-		}
-		
-		
-		
-		
-	
-		
-		
+		}		
 		
 		
 		String sessionEmail = (String) request.getSession(false).getAttribute("Email");	
